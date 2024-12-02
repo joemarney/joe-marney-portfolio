@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .skills {
+    justify-self: center;
+    display: grid;
+    gap: 15px;
+    margin-bottom: 10px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row-reverse;
+      border-radius: 15px;
+      // width: 200px;
+
+      p {
+        margin: 10px;
+      }
+
+      svg {
+        width: 30px;
+      }
+    }
+  }
+  section {
+    margin: 10px;
+  }
+  .projects {
+    display: grid;
+    justify-content: center;
+    .github {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      svg {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: 300px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 700px) {
+  .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .skills,
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
