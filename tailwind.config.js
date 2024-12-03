@@ -5,15 +5,17 @@ export default {
     extend: {
       colors: {
         transparent: "transparent",
-        current: "currentColor",
         white: "#ffffff",
         theme: {
-          background: "#172554",
-          darkest: "#1e3a8a",
-          dark: "#1d4ed8",
-          light: "#3b82f6",
-          lighter: "#93c5fd",
-          accents: "#bfdbfe",
+          background: "white",
+          boxes: "lightgrey",
+          borders: "black",
+          buttons: "black",
+          hover: "lightblue",
+          focus: "blue",
+          active: "blue",
+          accents: "black",
+          words: "black",
         },
       },
       container: {

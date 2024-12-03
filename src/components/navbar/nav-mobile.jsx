@@ -20,7 +20,7 @@ export const NavMobile = () => {
       <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
       <AnimatePresence>
         {isOpen && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} className="fixed left-0 shadow-4xl right-0 top-[3.5rem] p-5 pt-0 bg-theme-background border-b border-b-white/20">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} className="fixed left-0 shadow-4xl right-0 top-[3.5rem] p-8 bg-theme-background">
             <ul className="grid gap-2">
               {routes.map((route, idx) => {
                 const { Icon, to, title } = route;
@@ -36,9 +36,9 @@ export const NavMobile = () => {
                       delay: 0.1 + idx / 10,
                     }}
                     key={title}
-                    className="w-full p-[0.08rem] rounded-xl bg-gradient-to-tr from-theme-darkest via-theme-background to-theme-dark"
+                    className="w-full p-[0.08rem] rounded-xl bg-theme-boxes hover:text-theme-hover"
                   >
-                    <Link onClick={() => setOpen((prev) => !prev)} className={"flex items-center justify-between w-full p-5 rounded-xl bg-theme-950"} to={to}>
+                    <Link onClick={() => setOpen((prev) => !prev)} className={"flex items-center justify-between w-full p-5 rounded-xl"} to={to}>
                       <span className="flex gap-1 text-lg">{title}</span>
                       <Icon className="text-xl" />
                     </Link>

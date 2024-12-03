@@ -30,7 +30,7 @@ export default function NavBar() {
   }, [lastScrollY]);
 
   return (
-    <div className={`fixed top-0 left-0 right-0 bg-theme-background border-b border-theme-darkest z-50 transition-transform duration-300 ${isVisible ? "transform translate-y-0" : "transform -translate-y-full"}`}>
+    <div className={`fixed top-0 left-0 right-0 bg-theme-background border-b border-theme-borders z-50 transition-transform duration-300 ${isVisible ? "transform translate-y-0" : "transform -translate-y-full"}`}>
       <nav className="container flex items-center justify-between py-1 lg:py-5">
         <span className="text-lg">Joe Marney</span>
         <NavMobile />

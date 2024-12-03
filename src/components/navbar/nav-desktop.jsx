@@ -11,7 +11,7 @@ export const NavDesktop = () => {
         const { Icon, to, title } = route;
         return (
           <li key={title}>
-            <Link to={to} className="flex items-center gap-1 hover:text-theme-light transition-all">
+            <Link to={to} className="flex items-center gap-1 hover:text-theme-hover transition-all">
               <Icon />
               {title}
             </Link>
