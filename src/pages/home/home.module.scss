@@ -14,7 +14,6 @@
       align-items: center;
       flex-direction: row-reverse;
       border-radius: 15px;
-      // width: 200px;
 
       p {
         margin: 10px;
@@ -40,11 +39,33 @@
         margin-left: 10px;
       }
     }
+    .technologies {
+      justify-self: center;
+      display: grid;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        border-radius: 15px;
+        width: 150px;
+      }
+
+      p {
+        margin: 10px;
+      }
+
+      svg {
+        width: 30px;
+      }
+    }
   }
 }
 
 @media (min-width: 300px) {
-  .skills {
+  .skills,
+  .technologies {
     grid-template-columns: repeat(2, 1fr);
   }
   .projects {
@@ -53,7 +74,8 @@
 }
 
 @media (min-width: 700px) {
-  .skills {
+  .skills,
+  .technologies {
     grid-template-columns: repeat(4, 1fr);
   }
   .projects {
@@ -62,7 +84,6 @@
 }
 
 @media (min-width: 1400px) {
-  .skills,
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }

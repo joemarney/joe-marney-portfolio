@@ -1,5 +1,6 @@
 //! Imports
 import { Routes, Route } from "react-router-dom";
+import "../node_modules/@material-tailwind/html/scripts/ripple.js";
 
 //! Pages
 import Home from "./pages/home/home";

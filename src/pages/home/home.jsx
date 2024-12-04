@@ -1,6 +1,7 @@
 //! Imports
 import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, ExpressOriginal, MongodbOriginal, NpmOriginalWordmark, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, GithubOriginal, FigmaOriginal, NetlifyOriginal, HerokuOriginal, PypiOriginal } from "devicons-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 //! Styles
 import styles from "./home.module.scss";
@@ -30,6 +31,81 @@ export default function Home() {
       icon.innerHTML = upSVG;
     }
   }
+
+  useEffect(() => {
+    const initializeModals = () => {
+      const triggers = document.querySelectorAll("[data-dialog-target]");
+      const dialogs = document.querySelectorAll("[data-dialog]");
+      const backdrops = document.querySelectorAll("[data-dialog-backdrop]");
+      const closeTriggers = document.querySelectorAll("[data-dialog-close]");
+
+      triggers.forEach((trigger) => {
+        const dialogId = trigger.dataset.dialogTarget;
+        const dialog = Array.from(dialogs).find((d) => d.dataset.dialog === dialogId);
+        const backdrop = Array.from(backdrops).find((b) => b.dataset.dialogBackdrop === dialogId);
+
+        if (!dialog || !backdrop) return;
+
+        const mountValue = dialog.dataset.dialogMount || "opacity-1 translate-y-0";
+        const unmountValue = dialog.dataset.dialogUnmount || "opacity-0 -translate-y-14";
+        const transitionValue = dialog.dataset.dialogTransition || "transition-all duration-300";
+
+        const mountClasses = mountValue.split(" ");
+        const unmountClasses = unmountValue.split(" ");
+        const transitionClasses = transitionValue.split(" ");
+
+        const openModal = () => {
+          backdrop.classList.remove("pointer-events-none", "opacity-0");
+          dialog.classList.remove(...unmountClasses);
+          dialog.classList.add(...mountClasses);
+        };
+
+        const closeModal = () => {
+          backdrop.classList.add("pointer-events-none", "opacity-0");
+          dialog.classList.remove(...mountClasses);
+          dialog.classList.add(...unmountClasses);
+        };
+
+        trigger.addEventListener("click", () => openModal());
+
+        backdrop.addEventListener("click", (e) => {
+          if (e.target.dataset.dialogBackdropClose) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener("keyup", (e) => {
+          if (e.key === "Escape") {
+            closeModal();
+          }
+        });
+
+        closeTriggers.forEach((close) => close.addEventListener("click", () => closeModal()));
+
+        if (!backdrop.classList.contains("pointer-events-none")) {
+          backdrop.classList.add("pointer-events-none", "opacity-0");
+        }
+        if (!dialog.classList.contains(...unmountClasses)) {
+          dialog.classList.add(...unmountClasses);
+        }
+        if (transitionValue !== "false") {
+          dialog.classList.add(...transitionClasses);
+        }
+      });
+    };
+
+    initializeModals();
+
+    return () => {
+      const triggers = document.querySelectorAll("[data-dialog-target]");
+      const backdrops = document.querySelectorAll("[data-dialog-backdrop]");
+      const closeTriggers = document.querySelectorAll("[data-dialog-close]");
+
+      triggers.forEach((trigger) => trigger.removeEventListener("click", initializeModals));
+      backdrops.forEach((backdrop) => backdrop.removeEventListener("click", initializeModals));
+      closeTriggers.forEach((close) => close.removeEventListener("click", initializeModals));
+    };
+  }, []);
 
   return (
     <main className={styles.container}>
@@ -122,27 +198,68 @@ export default function Home() {
       </header>
       <div className={styles.projects}>
         <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative h-56 m-2.5 overflow-hidden text-theme-words rounded-md">
-            <img src="https://placehold.co/600x400/orange/black" />
+          <div className="relative m-2.5 rounded-md">
+            <img src="src/assets/images/mastermind.png" alt="screenshot of a Mastermind browser game with a dark theme" className="h-56 w-full object-cover object-top rounded-md" />
           </div>
           <div className="p-4">
             <h6 className="mb-2 text-theme-words text-xl font-semibold">Mastermind</h6>
             <p className="text-theme-words leading-normal font-light">My first project.</p>
             <p className="text-theme-words leading-normal font-light">A browser game inspired by the popular board game: Mastermind.</p>
           </div>
-          <div className="px-4 pb-4 pt-0 mt-2">
+          <div className="flex direction-row px-4 pb-4 pt-0 mt-2">
+            <button data-dialog-target="modal-xl" className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" data-ripple-light="true" type="button">
+              Read more
+            </button>
+            <div data-dialog-backdrop="modal-xl" data-dialog-backdrop-close="true" className="pointer-events-none fixed inset-0 z-[999] grid place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
+              <div data-dialog="modal-xl" className="relative m-4 p-4 w-full sm:w-3/4 max-h-screen overflow-y-auto rounded-lg bg-white shadow-sm">
+                <div>
+                  <h1>Mastermind</h1>
+                </div>
+                <div className="flex relative m-2.5 rounded-md justify-center">
+                  <img src="src/assets/images/mastermind.png" alt="screenshot of a Mastermind browser game with a dark theme" className="h-100 w-auto object-cover rounded-md" />
+                </div>
+                <div className="relative py-4 leading-normal text-theme-words">
+                  <em>Solo - 1 week</em>
+                </div>
+                <div className="relative py-4 leading-normal text-theme-words">
+                  <p>Over the course of a week we were set the task of creating a browser game. I chose to recreate the popular board game Mastermind. This project came after just 1 week of learning on the course. It has win/loss logic, an organised directory structure, Audio aspects and it is deployed online.</p>
+                </div>
+                <h2 className="text-lg font-semibold">Technologies used</h2>
+                <div className={styles.technologies}>
+                  <div className="bg-theme-boxes border border-theme-borders">
+                    <Html5Original size="40" />
+                    <p>HTML</p>
+                  </div>
+                  <div className="bg-theme-boxes border border-theme-borders">
+                    <Css3Original size="40" />
+                    <p>CSS</p>
+                  </div>
+                  <div className="bg-theme-boxes border border-theme-borders">
+                    <JavascriptOriginal size="40" />
+                    <p>JavaScript</p>
+                  </div>
+                  <div className="bg-theme-boxes border border-theme-borders">
+                    <FigmaOriginal size="40" />
+                    <p>Figma</p>
+                  </div>
+                </div>
+                <div className="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+                  <button data-dialog-close="true" className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" type="button">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+
             <Link to="https://github.com/joemarney/unit-1-project-mastermind" className={styles.github}>
-              <button className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" data-ripple-light="true" type="button">
-                Read more
-              </button>
               <GithubOriginal size="40" color="white" />
             </Link>
           </div>
         </div>
 
         <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative h-56 m-2.5 overflow-hidden text-theme-words rounded-md">
-            <img src="https://placehold.co/600x400/grey/black" />
+          <div className="relative m-2.5 rounded-md">
+            <img src="src/assets/images/beatsync.png" className="h-56 w-full object-cover object-top rounded-md" />
           </div>
           <div className="p-4">
             <h6 className="mb-2 text-theme-words text-xl font-semibold">Beatsync</h6>
@@ -160,8 +277,8 @@ export default function Home() {
         </div>
 
         <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative h-56 m-2.5 overflow-hidden text-theme-words rounded-md">
-            <img src="https://placehold.co/600x400/pink/black" />
+          <div className="relative m-2.5 rounded-md">
+            <img src="src/assets/images/lifesapitch.png" className="h-56 w-full object-cover object-top rounded-md" />
           </div>
           <div className="p-4">
             <h6 className="mb-2 text-theme-words text-xl font-semibold">Life&apos;s a Pitch</h6>
@@ -179,8 +296,8 @@ export default function Home() {
         </div>
 
         <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative h-56 m-2.5 overflow-hidden text-theme-words rounded-md">
-            <img src="https://placehold.co/600x400/yellow/black" />
+          <div className="relative m-2.5 rounded-md">
+            <img src="src/assets/images/repotted.png" className="h-56 w-full object-cover object-top rounded-md" />
           </div>
           <div className="p-4">
             <h6 className="mb-2 text-theme-words text-xl font-semibold">Repotted</h6>
