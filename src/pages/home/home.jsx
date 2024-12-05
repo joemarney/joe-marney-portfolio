@@ -1,7 +1,10 @@
 //! Imports
-import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, ExpressOriginal, MongodbOriginal, NpmOriginalWordmark, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, GithubOriginal, FigmaOriginal, NetlifyOriginal, HerokuOriginal, PypiOriginal } from "devicons-react";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, ExpressOriginal, MongodbOriginal, NpmOriginalWordmark, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal, PypiOriginal } from "devicons-react";
+import { useEffect, useState } from "react";
+import { projects } from "../../components/projects/myProjects";
+
+//! Components
+import ProjectCard from "../../components/projects/projects";
 
 //! Styles
 import styles from "./home.module.scss";
@@ -107,6 +110,11 @@ export default function Home() {
     };
   }, []);
 
+  const [openModalIndex, setOpenModalIndex] = useState(null);
+
+  const openModal = (index) => setOpenModalIndex(index);
+  const closeModal = () => setOpenModalIndex(null);
+
   return (
     <main className={styles.container}>
       <header>
@@ -196,123 +204,11 @@ export default function Home() {
         <h1>Projects</h1>
         <p>Before enrolling in the General Assembly: Software Engineering Immersive course, I had little to no knowledge of HTML, CSS, or JavaScript. Over the course of 12 intensive weeks, I&apos;ve transformed that curiosity into the ability to build applications I once wondered, &quot;How do they even do that?&quot; I&apos;m incredibly proud of the projects I&apos;ve created and the skills I&apos;ve developed, which showcase my journey from a beginner to a capable developer ready to tackle real-world challenges.</p>
       </header>
+
       <div className={styles.projects}>
-        <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative m-2.5 rounded-md">
-            <img src="src/assets/images/mastermind.png" alt="screenshot of a Mastermind browser game with a dark theme" className="h-56 w-full object-cover object-top rounded-md" />
-          </div>
-          <div className="p-4">
-            <h6 className="mb-2 text-theme-words text-xl font-semibold">Mastermind</h6>
-            <p className="text-theme-words leading-normal font-light">My first project.</p>
-            <p className="text-theme-words leading-normal font-light">A browser game inspired by the popular board game: Mastermind.</p>
-          </div>
-          <div className="flex direction-row px-4 pb-4 pt-0 mt-2">
-            <button data-dialog-target="modal-xl" className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" data-ripple-light="true" type="button">
-              Read more
-            </button>
-            <div data-dialog-backdrop="modal-xl" data-dialog-backdrop-close="true" className="pointer-events-none fixed inset-0 z-[999] grid place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300">
-              <div data-dialog="modal-xl" className="relative m-4 p-4 w-full sm:w-3/4 max-h-screen overflow-y-auto rounded-lg bg-white shadow-sm">
-                <div>
-                  <h1>Mastermind</h1>
-                </div>
-                <div className="flex relative m-2.5 rounded-md justify-center">
-                  <img src="src/assets/images/mastermind.png" alt="screenshot of a Mastermind browser game with a dark theme" className="h-100 w-auto object-cover rounded-md" />
-                </div>
-                <div className="relative py-4 leading-normal text-theme-words">
-                  <em>Solo - 1 week</em>
-                </div>
-                <div className="relative py-4 leading-normal text-theme-words">
-                  <p>Over the course of a week we were set the task of creating a browser game. I chose to recreate the popular board game Mastermind. This project came after just 1 week of learning on the course. It has win/loss logic, an organised directory structure, Audio aspects and it is deployed online.</p>
-                </div>
-                <h2 className="text-lg font-semibold">Technologies used</h2>
-                <div className={styles.technologies}>
-                  <div className="bg-theme-boxes border border-theme-borders">
-                    <Html5Original size="40" />
-                    <p>HTML</p>
-                  </div>
-                  <div className="bg-theme-boxes border border-theme-borders">
-                    <Css3Original size="40" />
-                    <p>CSS</p>
-                  </div>
-                  <div className="bg-theme-boxes border border-theme-borders">
-                    <JavascriptOriginal size="40" />
-                    <p>JavaScript</p>
-                  </div>
-                  <div className="bg-theme-boxes border border-theme-borders">
-                    <FigmaOriginal size="40" />
-                    <p>Figma</p>
-                  </div>
-                </div>
-                <div className="flex shrink-0 flex-wrap items-center pt-4 justify-end">
-                  <button data-dialog-close="true" className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" type="button">
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <Link to="https://github.com/joemarney/unit-1-project-mastermind" className={styles.github}>
-              <GithubOriginal size="40" color="white" />
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative m-2.5 rounded-md">
-            <img src="src/assets/images/beatsync.png" className="h-56 w-full object-cover object-top rounded-md" />
-          </div>
-          <div className="p-4">
-            <h6 className="mb-2 text-theme-words text-xl font-semibold">Beatsync</h6>
-            <p className="text-theme-words leading-normal font-light">My second project.</p>
-            <p className="text-theme-words leading-normal font-light">An application where users can rate music venues.</p>
-          </div>
-          <div className="px-4 pb-4 pt-0 mt-2">
-            <Link to="https://github.com/joemarney/unit-2-project-beatsync" className={styles.github}>
-              <button className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" data-ripple-light="true" type="button">
-                Read more
-              </button>
-              <GithubOriginal size="40" color="white" />
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative m-2.5 rounded-md">
-            <img src="src/assets/images/lifesapitch.png" className="h-56 w-full object-cover object-top rounded-md" />
-          </div>
-          <div className="p-4">
-            <h6 className="mb-2 text-theme-words text-xl font-semibold">Life&apos;s a Pitch</h6>
-            <p className="text-theme-words leading-normal font-light">My third project.</p>
-            <p className="text-theme-words leading-normal font-light">A place to search for campsites around the UK.</p>
-          </div>
-          <div className="px-4 pb-4 pt-0 mt-2">
-            <Link to="https://github.com/joemarney/unit-3-project-lifesapitch-frontend" className={styles.github}>
-              <button className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" data-ripple-light="true" type="button">
-                Read more
-              </button>
-              <GithubOriginal size="40" color="white" />
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative flex flex-col my-6 bg-theme-boxes shadow-sm border border-theme-borders rounded-lg w-96">
-          <div className="relative m-2.5 rounded-md">
-            <img src="src/assets/images/repotted.png" className="h-56 w-full object-cover object-top rounded-md" />
-          </div>
-          <div className="p-4">
-            <h6 className="mb-2 text-theme-words text-xl font-semibold">Repotted</h6>
-            <p className="text-theme-words leading-normal font-light">My final project.</p>
-            <p className="text-theme-words leading-normal font-light">Inspired by my love for houseplants. An app for people to track their plant growth.</p>
-          </div>
-          <div className="px-4 pb-4 pt-0 mt-2">
-            <Link to="https://github.com/joemarney/unit-4-project-repotted-frontend" className={styles.github}>
-              <button className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" data-ripple-light="true" type="button">
-                Read more
-              </button>
-              <GithubOriginal size="40" color="white" />
-            </Link>
-          </div>
-        </div>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} {...project} isModalOpen={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
+        ))}
       </div>
     </main>
   );

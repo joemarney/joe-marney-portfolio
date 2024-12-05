@@ -27,45 +27,17 @@
   section {
     margin: 10px;
   }
+
   .projects {
     display: grid;
-    justify-content: center;
-    .github {
-      display: flex;
-      flex-direction: row;
-      width: fit-content;
-      svg {
-        width: 40px;
-        margin-left: 10px;
-      }
-    }
-    .technologies {
-      justify-self: center;
-      display: grid;
-
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row-reverse;
-        border-radius: 15px;
-        width: 150px;
-      }
-
-      p {
-        margin: 10px;
-      }
-
-      svg {
-        width: 30px;
-      }
-    }
+    justify-self: center;
+    align-self: center;
+    grid-gap: 30px;
   }
 }
 
 @media (min-width: 300px) {
-  .skills,
-  .technologies {
+  .skills {
     grid-template-columns: repeat(2, 1fr);
   }
   .projects {
@@ -74,8 +46,7 @@
 }
 
 @media (min-width: 700px) {
-  .skills,
-  .technologies {
+  .skills {
     grid-template-columns: repeat(4, 1fr);
   }
   .projects {
