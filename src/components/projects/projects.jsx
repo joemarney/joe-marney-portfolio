@@ -28,7 +28,7 @@ export default function ProjectCard({ title, description, image, timescale, gitH
         <h6 className="mb-2 text-theme-words text-xl font-semibold">{title}</h6>
         <p className="text-theme-words leading-normal font-light">{description}</p>
       </div>
-      <div className="flex direction-row px-4 pb-4 pt-0 mt-2">
+      <div className="flex direction-row px-4 pb-4 pt-0 mt-2 justify-between">
         <button onClick={openModal} className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" type="button">
           Read more
         </button>

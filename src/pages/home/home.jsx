@@ -204,7 +204,6 @@ export default function Home() {
         <h1>Projects</h1>
         <p>Before enrolling in the General Assembly: Software Engineering Immersive course, I had little to no knowledge of HTML, CSS, or JavaScript. Over the course of 12 intensive weeks, I&apos;ve transformed that curiosity into the ability to build applications I once wondered, &quot;How do they even do that?&quot; I&apos;m incredibly proud of the projects I&apos;ve created and the skills I&apos;ve developed, which showcase my journey from a beginner to a capable developer ready to tackle real-world challenges.</p>
       </header>
-
       <div className={styles.projects}>
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} isModalOpen={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />

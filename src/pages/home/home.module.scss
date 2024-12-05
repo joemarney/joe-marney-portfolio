@@ -16,16 +16,13 @@
       border-radius: 15px;
 
       p {
-        margin: 10px;
+        margin: 15px;
       }
 
       svg {
-        width: 30px;
+        width: 25px;
       }
     }
-  }
-  section {
-    margin: 10px;
   }
 
   .projects {
@@ -55,6 +52,9 @@
 }
 
 @media (min-width: 1400px) {
+  .skills {
+    grid-template-columns: repeat(8, 1fr);
+  }
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }

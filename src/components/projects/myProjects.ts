@@ -33,7 +33,8 @@ export const projects = [
       { Icon: MongodbOriginal, label: "MongoDB" },
       { Icon: NetlifyOriginal, label: "Netlify" },
     ],
-    inDepthDescription: "I have always loved going to music events. Drum and bass in particular. Over my time I worked out that the venue makes or breaks the event. I designed and developed Beatsync to allow users to have a say. I have no clue why other apps do not do this as I think it could be actually useful to lots of people. It is a full MEN stack app with full CRUD functionality. I used EJS templates to render within the browser. It has session based authentication baked in and it is deployed online.",
+    inDepthDescription:
+      "Music has always been a significant part of my life, with a particular passion for drum and bass events. Over time, I realized that the quality of a music venue can make or break the overall experience. This observation inspired me to create Beatsync — a platform where music lovers can share their experiences and rate venues, empowering others to make informed decisions.\nBeatsync is a full MEN stack application (MongoDB, Express, and Node.js) that demonstrates robust full-stack development skills. It includes full CRUD functionality, enabling users to add, update, and manage reviews seamlessly. The application is built with EJS templates, allowing dynamic content rendering directly within the browser, and features session-based authentication for secure and personalized user experiences.\nIn addition to its functional depth, Beatsync is deployed online, making it accessible to a broader audience. This project not only allowed me to merge my love for music with programming but also reinforced my belief in creating technology that serves a real-world purpose. Building Beatsync was an exciting journey that challenged me to think about user experience, data flow, and the value of community-driven platforms.",
   },
   {
     title: "Life's a Pitch",
