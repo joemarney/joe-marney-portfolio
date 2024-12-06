@@ -117,9 +117,6 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
-      <header>
-        <h2>Junior Software Engineer</h2>
-      </header>
       <section>
         <div className="border-b border-theme-borders">
           <button onClick={() => toggleAccordion()} className="w-full flex justify-between items-center py-5 text-theme-words">
