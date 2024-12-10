@@ -1,5 +1,5 @@
 //! Imports
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
 
@@ -11,9 +11,6 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
-    watch,
-    control,
-    setValue,
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
     mode: "onTouched",
@@ -21,7 +18,7 @@ export default function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
 
-  const apiKey = "463a1e9b-0613-4472-a16e-1b772b5947f0";
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
@@ -32,11 +29,13 @@ export default function Contact() {
     onSuccess: (msg, data) => {
       setIsSuccess(true);
       setMessage(msg);
+      console.log(data);
       reset();
     },
     onError: (msg, data) => {
       setIsSuccess(false);
       setMessage(msg);
+      console.log(data);
     },
   });
 
@@ -118,8 +117,8 @@ export default function Contact() {
         </button>
       </form>
 
-      {isSubmitSuccessful && isSuccess && <div className="mt-3 text-sm text-center text-green-500">{message || "Success. Message sent successfully"}</div>}
-      {isSubmitSuccessful && !isSuccess && <div className="mt-3 text-sm text-center text-red-500">{message || "Something went wrong. Please try later."}</div>}
+      {isSubmitSuccessful && isSuccess && message && <div className="mt-3 text-sm text-center text-green-500">{"Thank you! I will get back to you soon."}</div>}
+      {isSubmitSuccessful && !isSuccess && message && <div className="mt-3 text-sm text-center text-red-500">{"Oops, I didn't get that. Please try again later"}</div>}
     </main>
   );
 }
