@@ -1,3 +1,4 @@
+//! Imports
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GithubOriginal } from "devicons-react";
@@ -6,7 +7,6 @@ import { GithubOriginal } from "devicons-react";
 import styles from "./projects.module.scss";
 
 export default function ProjectCard({ title, description, image, timescale, gitHubLink, technologies, inDepthDescription, isModalOpen, openModal, closeModal }) {
-  // Disable scrolling on the body when the modal is open
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
