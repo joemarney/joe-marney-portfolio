@@ -119,7 +119,7 @@ export default function Home() {
     <main className={styles.container}>
       <section>
         <div className="border-b border-theme-borders">
-          <button onClick={() => toggleAccordion()} className="w-full flex justify-between items-center py-5 text-theme-words">
+          <button onClick={() => toggleAccordion()} className="w-full flex justify-between items-center py-2 text-theme-words">
             <h2>Skills</h2>
             <span id="icon-1" className="text-theme-words transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="w-4 h-4">
