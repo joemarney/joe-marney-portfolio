@@ -6,6 +6,10 @@ import { projects } from "../../components/projects/myProjects";
 //! Components
 import ProjectCard from "../../components/projects/projects";
 
+//! Pages
+import Contact from "../contact/contact.jsx";
+import About from "../about/about.jsx";
+
 //! Styles
 import styles from "./home.module.scss";
 
@@ -117,10 +121,14 @@ export default function Home() {
 
   return (
     <main className={styles.container}>
+      <div className={styles.about}>
+        <h1 className="border-b border-theme-borders">About me</h1>
+        <About />
+      </div>
       <section>
-        <div className="border-b border-theme-borders">
-          <button onClick={() => toggleAccordion()} className="w-full flex justify-between items-center py-2 text-theme-words">
-            <h2>Skills</h2>
+        <div className="border-b border-theme-borders" id="skills">
+          <button onClick={() => toggleAccordion()} className="w-full flex justify-between items-center text-theme-words">
+            <h1>Skills</h1>
             <span id="icon-1" className="text-theme-words transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" className="w-4 h-4">
                 <path fillRule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
@@ -197,14 +205,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <header>
-        <h1>Projects</h1>
-        <p>Before enrolling in the General Assembly: Software Engineering Immersive course, I had little to no knowledge of HTML, CSS, or JavaScript. Over the course of 12 intensive weeks, I&apos;ve transformed that curiosity into the ability to build applications I once wondered, &quot;How do they even do that?&quot; I&apos;m incredibly proud of the projects I&apos;ve created and the skills I&apos;ve developed, which showcase my journey from a beginner to a capable developer ready to tackle real-world challenges.</p>
-      </header>
-      <div className={styles.projects}>
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} isModalOpen={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
-        ))}
+      <div className={styles.projects} id="projects">
+        <header>
+          <h1 className="border-b border-theme-borders">Projects</h1>
+          <p>Before enrolling in the General Assembly: Software Engineering Immersive course, I had little to no knowledge of HTML, CSS, or JavaScript. Over the course of 12 intensive weeks, I&apos;ve transformed that curiosity into the ability to build applications I once wondered, &quot;How do they even do that?&quot; I&apos;m incredibly proud of the projects I&apos;ve created and the skills I&apos;ve developed, which showcase my journey from a beginner to a capable developer ready to tackle real-world challenges.</p>
+        </header>
+        <section>
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} isModalOpen={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
+          ))}
+        </section>
+      </div>
+      <div id="contact">
+        <h1 className="border-b border-theme-borders">Contact me</h1>
+        <Contact />
       </div>
     </main>
   );

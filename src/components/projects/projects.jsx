@@ -6,7 +6,7 @@ import { GithubOriginal } from "devicons-react";
 //! Styles
 import styles from "./projects.module.scss";
 
-export default function ProjectCard({ title, description, image, timescale, gitHubLink, technologies, inDepthDescription, isModalOpen, openModal, closeModal }) {
+export default function ProjectCard({ title, description, image, timescale, gitHubLink, deployedLink, technologies, inDepthDescription, isModalOpen, openModal, closeModal }) {
   useEffect(() => {
     if (isModalOpen) {
       document.body.style.overflow = "hidden";
@@ -44,6 +44,13 @@ export default function ProjectCard({ title, description, image, timescale, gitH
               <div className="relative px-5 leading-normal text-theme-words">
                 <em>{timescale}</em>
               </div>
+              <div className="flex justify-center mt-2.5">
+                <Link to={deployedLink}>
+                  <button className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" type="button">
+                    Check it out
+                  </button>
+                </Link>
+              </div>
               <div className="relative p-5 leading-normal text-theme-words">
                 {inDepthDescription.split("\n").map((paragraph, index) => (
                   <p key={index} className="mb-3">
@@ -56,7 +63,7 @@ export default function ProjectCard({ title, description, image, timescale, gitH
                 {technologies.map(({ Icon, label }, index) => (
                   <div key={index} className="bg-theme-boxes border border-theme-borders">
                     <Icon size="40" />
-                    <p className="text-sm text-theme-words">{label}</p>
+                    <p className="text-sm text-theme-words px-3">{label}</p>
                   </div>
                 ))}
               </div>

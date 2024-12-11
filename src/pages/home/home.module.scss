@@ -2,6 +2,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  h1 {
+    padding-bottom: 5px;
+  }
+
+  .about {
+    p {
+      margin: 10px 0px;
+    }
+  }
+
   .skills {
     justify-self: center;
     display: grid;
@@ -26,10 +37,19 @@
   }
 
   .projects {
-    display: grid;
-    justify-self: center;
-    align-self: center;
-    grid-gap: 30px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 10px 0px;
+    }
+
+    section {
+      justify-self: center;
+      align-self: center;
+      display: grid;
+      grid-gap: 30px;
+    }
   }
 }
 
@@ -37,7 +57,7 @@
   .skills {
     grid-template-columns: repeat(2, 1fr);
   }
-  .projects {
+  .projects section {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -46,7 +66,7 @@
   .skills {
     grid-template-columns: repeat(4, 1fr);
   }
-  .projects {
+  .projects section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -55,7 +75,7 @@
   .skills {
     grid-template-columns: repeat(8, 1fr);
   }
-  .projects {
+  .projects section {
     grid-template-columns: repeat(4, 1fr);
   }
 }

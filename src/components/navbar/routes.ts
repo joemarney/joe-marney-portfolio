@@ -1,22 +1,28 @@
 //! Imports
-import { BiHomeAlt2 } from "react-icons/bi";
+import { BiWrench } from "react-icons/bi";
 import { PiChatCircleBold } from "react-icons/pi";
 import { BiUser } from "react-icons/bi";
+import { IoLibraryOutline } from "react-icons/io5";
 
 export const routes = [
   {
-    title: "Home",
-    to: "/",
-    Icon: BiHomeAlt2,
+    title: "About",
+    to: "about",
+    Icon: BiUser,
+  },
+  {
+    title: "Skills",
+    to: "skills",
+    Icon: BiWrench,
+  },
+  {
+    title: "Projects",
+    to: "projects",
+    Icon: IoLibraryOutline,
   },
   {
     title: "Contact",
-    to: "/contact",
+    to: "contact",
     Icon: PiChatCircleBold,
-  },
-  {
-    title: "About",
-    to: "/about",
-    Icon: BiUser,
   },
 ];

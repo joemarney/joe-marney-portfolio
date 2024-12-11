@@ -1,5 +1,5 @@
 //! Imports
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 //! Routes
 import { routes } from "./routes";
@@ -11,7 +11,7 @@ export const NavDesktop = () => {
         const { Icon, to, title } = route;
         return (
           <li key={title}>
-            <Link to={to} className="flex items-center gap-1 hover:text-theme-hover transition-all">
+            <Link to={to} smooth={true} duration={500} className="flex items-center gap-1 hover:text-theme-hover transition-all cursor-pointer">
               <Icon />
               {title}
             </Link>

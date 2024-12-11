@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 //! Routes
 import { routes } from "./routes";
@@ -38,7 +38,7 @@ export const NavMobile = () => {
                     key={title}
                     className="w-full p-[0.08rem] rounded-xl bg-theme-boxes hover:text-theme-hover"
                   >
-                    <Link onClick={() => setOpen((prev) => !prev)} className={"flex items-center justify-between w-full p-5 rounded-xl"} to={to}>
+                    <Link onClick={() => setOpen((prev) => !prev)} className={"flex items-center justify-between w-full p-5 rounded-xl cursor-pointer"} to={to} smooth={true} duration={500}>
                       <span className="flex gap-1 text-lg">{title}</span>
                       <Icon className="text-xl" />
                     </Link>

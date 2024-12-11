@@ -8,6 +8,7 @@ export const projects = [
     image: "src/assets/images/mastermind.png",
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-1-project-mastermind",
+    deployedLink: "https://joemarney.github.io/unit-1-project-mastermind/",
     technologies: [
       { Icon: FigmaOriginal, label: "Figma" },
       { Icon: Html5Original, label: "HTML" },
@@ -23,6 +24,7 @@ export const projects = [
     image: "src/assets/images/beatsync.png",
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-2-project-beatsync",
+    deployedLink: "https://projectbeatsync.netlify.app/",
     technologies: [
       { Icon: FigmaOriginal, label: "Figma" },
       { Icon: Html5Original, label: "HTML" },
@@ -42,6 +44,7 @@ export const projects = [
     image: "src/assets/images/lifesapitch.png",
     timescale: "Pair - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-3-project-lifesapitch-frontend",
+    deployedLink: "https://lifesapitch.netlify.app/",
     technologies: [
       { Icon: FigmaOriginal, label: "Figma" },
       { Icon: NodejsOriginal, label: "Node.js" },
@@ -59,6 +62,7 @@ export const projects = [
     image: "src/assets/images/repotted.png",
     timescale: "Solo - 10 days",
     gitHubLink: "https://github.com/joemarney/unit-4-project-repotted-frontend",
+    deployedLink: "https://repotted.netlify.app/",
     technologies: [
       { Icon: FigmaOriginal, label: "Figma" },
       { Icon: PythonOriginal, label: "Python" },
