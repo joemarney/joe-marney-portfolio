@@ -1,2 +1,22 @@
-.container {
+.skillsContainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 5px;
+
+    p {
+      margin-right: 5px;
+    }
+
+    svg {
+      width: 25px;
+    }
+  }
 }

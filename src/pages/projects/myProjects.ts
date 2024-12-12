@@ -4,7 +4,7 @@ import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, Expres
 export const projects = [
   {
     title: "Mastermind",
-    description: "A browser game inspired by the popular board game: Mastermind.",
+    description: "Code cracking game",
     image: "src/assets/images/mastermind.png",
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-1-project-mastermind",
@@ -20,7 +20,7 @@ export const projects = [
   },
   {
     title: "Beatsync",
-    description: "An application where users can rate music venues.",
+    description: "Rate music venues",
     image: "src/assets/images/beatsync.png",
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-2-project-beatsync",
@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     title: "Life's a Pitch",
-    description: "An application where users can view campsites around the UK.",
+    description: "View campsites around the UK",
     image: "src/assets/images/lifesapitch.png",
     timescale: "Pair - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-3-project-lifesapitch-frontend",
@@ -58,7 +58,7 @@ export const projects = [
   },
   {
     title: "Repotted",
-    description: "An application for houseplant owners to keep track of their plants in virtual rooms.",
+    description: "Track plant growth",
     image: "src/assets/images/repotted.png",
     timescale: "Solo - 10 days",
     gitHubLink: "https://github.com/joemarney/unit-4-project-repotted-frontend",
