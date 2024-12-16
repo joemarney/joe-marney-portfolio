@@ -22,71 +22,71 @@ export default function About({ scrollTo }) {
     <>
       <section id="about" className="h-screen flex flex-col justify-center items-center bg-gray-200 text-gray-800 text-center">
         <h2 className="text-4xl font-bold">About Me</h2>
-        <p className="mt-6 text-lg max-w-2xl">Your "About Me" content goes here.</p>
+        <p className="mt-6 text-lg max-w-2xl">This is going to be the about me.</p>
         <h3 className="text-3xl font-bold">Skills</h3>
         <div className={styles.skillsContainer}>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <Html5Original />
+          <div>
+            <Html5Original size="40" />
             <p>HTML</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <Css3Original />
+          <div>
+            <Css3Original size="40" />
             <p>CSS</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <JavascriptOriginal />
+          <div>
+            <JavascriptOriginal size="40" />
             <p>JavaScript</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <NodejsOriginal />
+          <div>
+            <NodejsOriginal size="40" />
             <p>Node.js</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <ExpressOriginal />
+          <div>
+            <ExpressOriginal size="40" />
             <p>Express</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <MongodbOriginal />
+          <div>
+            <MongodbOriginal size="40" />
             <p>MongoDB</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <NpmOriginalWordmark />
+          <div>
+            <NpmOriginalWordmark size="40" />
             <p>NPM</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <ReactOriginal />
+          <div>
+            <ReactOriginal size="40" />
             <p>React.js</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <SassOriginal />
+          <div>
+            <SassOriginal size="40" />
             <p>SASS</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <PythonOriginal />
+          <div>
+            <PythonOriginal size="40" />
             <p>Python</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <PostgresqlOriginal />
+          <div>
+            <PostgresqlOriginal size="40" />
             <p>PostgreSQL</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <DjangoPlain />
+          <div>
+            <DjangoPlain size="40" />
             <p>Django</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <FigmaOriginal />
+          <div>
+            <FigmaOriginal size="40" />
             <p>Figma</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <NetlifyOriginal />
+          <div>
+            <NetlifyOriginal size="40" />
             <p>Netlify</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <HerokuOriginal />
+          <div>
+            <HerokuOriginal size="40" />
             <p>Heroku</p>
           </div>
-          <div className="bg-theme-boxes border border-theme-borders">
-            <PypiOriginal />
+          <div>
+            <PypiOriginal size="40" />
             <p>Pypi</p>
           </div>
         </div>

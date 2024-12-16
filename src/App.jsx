@@ -20,8 +20,6 @@ export default function App() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const [openModalIndex, setOpenModalIndex] = useState(null);
-
   const scrollTo = (section) => {
     if (section === "landing") {
       landingRef.current.scrollIntoView({ behavior: "smooth" });
@@ -34,31 +32,37 @@ export default function App() {
     }
   };
 
+  const [openModalIndex, setOpenModalIndex] = useState(null);
+
   const openModal = (index) => setOpenModalIndex(index);
   const closeModal = () => setOpenModalIndex(null);
 
   return (
     <>
       <NavBar scrollTo={scrollTo} />
+
       <section ref={landingRef}>
         <Landing scrollTo={scrollTo} />
       </section>
+
       <section ref={aboutRef}>
         <About scrollTo={scrollTo} />
       </section>
-      <section ref={projectsRef} className="relative">
-        <div className="h-screen flex flex-row justify-center items-center bg-gray-800">
+
+      <section ref={projectsRef} id="projects" className="min-h-screen flex flex-col justify-center items-center bg-gray-800 text-white text-center place-items-center">
+        <h1 className="text-4xl">Projects</h1>
+        <div className="w-full flex flex-row justify-center items-center m-5">
           {projects.map((project, index) => (
-            <Projects key={index} {...project} isModalOpen={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
+            <div key={index} className="m-5">
+              <Projects {...project} openModalIndex={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
+            </div>
           ))}
         </div>
-
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
-          <button className="mt-10 text-white text-2xl animate-bounce focus:outline-none" onClick={() => scrollTo("contact")}>
-            ↓
-          </button>
-        </div>
+        <button className="mt-10 text-white text-2xl animate-bounce focus:outline-none" onClick={() => scrollTo("contact")}>
+          ↓
+        </button>
       </section>
+
       <section ref={contactRef}>
         <Contact />
       </section>

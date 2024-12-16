@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     title: "Life's a Pitch",
-    description: "View campsites around the UK",
+    description: "View campsites",
     image: "src/assets/images/lifesapitch.png",
     timescale: "Pair - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-3-project-lifesapitch-frontend",

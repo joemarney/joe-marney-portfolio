@@ -1,11 +1,11 @@
-.github {
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-
-  svg {
-    width: 40px;
-    margin-left: 10px;
+.container {
+  a {
+    display: flex;
+    justify-content: center;
+    svg {
+      width: 40px;
+      margin: 10px;
+    }
   }
 }
 
