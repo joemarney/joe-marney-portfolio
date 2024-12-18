@@ -42,6 +42,7 @@ export default function Contact() {
   return (
     <section id="contact" className="h-screen flex flex-col justify-center items-center bg-gray-200 text-gray-800 text-center">
       <main className={styles.container}>
+        <h1 className="text-4xl font-bold">Contact Me</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="my-10">
           <input type="checkbox" id="" className="hidden" style={{ display: "none" }} {...register("botcheck")}></input>
 

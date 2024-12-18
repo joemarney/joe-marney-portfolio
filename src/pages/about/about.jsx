@@ -1,16 +1,3 @@
-//! Styles
-// import styles from "./about.module.scss";
-
-// export default function About() {
-//   return (
-//     <main className={styles.container}>
-//       <p>I am a Junior Software Engineer with a background in Manufacturing Engineering. For eight years, I worked in the Aerospace industry, where I developed a deep understanding of precision, problem-solving, and innovation. However, I reached a point where I felt I was coasting, and that wasn't fulfilling. I thrive on challenges and constant learning, so I decided it was time for a change.</p>
-//       <p>Fueled by my interest in technology and a passion for understanding how things work, I took a leap into software engineering by completing the General Assembly: Software Engineering Immersive Bootcamp. This intensive program expanded my technical skill set and reinforced my love for building solutions and solving complex problems.</p>
-//       <p>Now, I'm excited to apply my engineering mindset and newly honed software skills in a professional setting. I'm eager to contribute to impactful projects, collaborate with innovative teams, and continue growing in a field where learning never stops.</p>
-//     </main>
-//   );
-// }
-
 //! Imports
 import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, ExpressOriginal, MongodbOriginal, NpmOriginalWordmark, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal, PypiOriginal } from "devicons-react";
 
@@ -21,73 +8,73 @@ export default function About({ scrollTo }) {
   return (
     <>
       <section id="about" className="h-screen flex flex-col justify-center items-center bg-gray-200 text-gray-800 text-center">
-        <h2 className="text-4xl font-bold">About Me</h2>
-        <p className="mt-6 text-lg max-w-2xl">This is going to be the about me.</p>
-        <h3 className="text-3xl font-bold">Skills</h3>
+        <h1 className="text-4xl font-bold">About Me</h1>
+        <p className="mt-6 text-lg max-w-2xl">For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to change my career.</p>
+        <p className="mt-6 text-lg max-w-2xl">I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12 week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
         <div className={styles.skillsContainer}>
-          <div>
-            <Html5Original size="40" />
-            <p>HTML</p>
+          <div className="relative group flex flex-col items-center">
+            <Html5Original size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">HTML</span>
           </div>
-          <div>
-            <Css3Original size="40" />
-            <p>CSS</p>
+          <div className="relative group flex flex-col items-center">
+            <Css3Original size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">CSS</span>
           </div>
-          <div>
-            <JavascriptOriginal size="40" />
-            <p>JavaScript</p>
+          <div className="relative group flex flex-col items-center">
+            <JavascriptOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">JavaScript</span>
           </div>
-          <div>
-            <NodejsOriginal size="40" />
-            <p>Node.js</p>
+          <div className="relative group flex flex-col items-center">
+            <NodejsOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Node.js</span>
           </div>
-          <div>
-            <ExpressOriginal size="40" />
-            <p>Express</p>
+          <div className="relative group flex flex-col items-center">
+            <ExpressOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Express</span>
           </div>
-          <div>
-            <MongodbOriginal size="40" />
-            <p>MongoDB</p>
+          <div className="relative group flex flex-col items-center">
+            <MongodbOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">MongoDB</span>
           </div>
-          <div>
-            <NpmOriginalWordmark size="40" />
-            <p>NPM</p>
+          <div className="relative group flex flex-col items-center">
+            <NpmOriginalWordmark size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">NPM</span>
           </div>
-          <div>
-            <ReactOriginal size="40" />
-            <p>React.js</p>
+          <div className="relative group flex flex-col items-center">
+            <ReactOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">React.js</span>
           </div>
-          <div>
-            <SassOriginal size="40" />
-            <p>SASS</p>
+          <div className="relative group flex flex-col items-center">
+            <SassOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">SASS</span>
           </div>
-          <div>
-            <PythonOriginal size="40" />
-            <p>Python</p>
+          <div className="relative group flex flex-col items-center">
+            <PythonOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Python</span>
           </div>
-          <div>
-            <PostgresqlOriginal size="40" />
-            <p>PostgreSQL</p>
+          <div className="relative group flex flex-col items-center">
+            <PostgresqlOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">PostgreSQL</span>
           </div>
-          <div>
-            <DjangoPlain size="40" />
-            <p>Django</p>
+          <div className="relative group flex flex-col items-center">
+            <DjangoPlain size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Django</span>
           </div>
-          <div>
-            <FigmaOriginal size="40" />
-            <p>Figma</p>
+          <div className="relative group flex flex-col items-center">
+            <FigmaOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Figma</span>
           </div>
-          <div>
-            <NetlifyOriginal size="40" />
-            <p>Netlify</p>
+          <div className="relative group flex flex-col items-center">
+            <NetlifyOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Netlify</span>
           </div>
-          <div>
-            <HerokuOriginal size="40" />
-            <p>Heroku</p>
+          <div className="relative group flex flex-col items-center">
+            <HerokuOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Heroku</span>
           </div>
-          <div>
-            <PypiOriginal size="40" />
-            <p>Pypi</p>
+          <div className="relative group flex flex-col items-center">
+            <PypiOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Pypi</span>
           </div>
         </div>
         <button className="mt-10 text-2xl animate-bounce focus:outline-none" onClick={() => scrollTo("projects")}>

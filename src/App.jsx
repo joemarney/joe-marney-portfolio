@@ -49,11 +49,11 @@ export default function App() {
         <About scrollTo={scrollTo} />
       </section>
 
-      <section ref={projectsRef} id="projects" className="min-h-screen flex flex-col justify-center items-center bg-gray-800 text-white text-center place-items-center">
-        <h1 className="text-4xl">Projects</h1>
-        <div className="w-full flex flex-row justify-center items-center m-5">
+      <section ref={projectsRef} id="projects" className="min-h-screen flex flex-col justify-center items-center bg-gray-800 text-white text-center place-items-center overflow-x-hidden">
+        <h1 className="text-4xl font-bold text-center">Projects</h1>
+        <div className="w-full flex flex-wrap justify-center items-center m-5">
           {projects.map((project, index) => (
-            <div key={index} className="m-5">
+            <div key={index} className="m-2.5 flex-shrink-0 w-full sm:w-80 md:w-96 lg:w-1/3 xl:w-1/4">
               <Projects {...project} openModalIndex={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
             </div>
           ))}
