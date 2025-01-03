@@ -20,18 +20,6 @@ export default function App() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
-  // const scrollTo = (section) => {
-  //   if (section === "landing") {
-  //     landingRef.current.scrollIntoView({ behavior: "smooth" });
-  //   } else if (section === "about") {
-  //     aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  //   } else if (section === "projects") {
-  //     projectsRef.current.scrollIntoView({ behavior: "smooth" });
-  //   } else if (section === "contact") {
-  //     contactRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-
   const scrollTo = (section) => {
     document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
