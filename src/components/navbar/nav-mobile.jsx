@@ -17,7 +17,7 @@ export const NavMobile = ({ scrollTo }) => {
 
   return (
     <div ref={ref} className="lg:hidden ">
-      <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
+      <Hamburger toggled={isOpen} size={20} toggle={setOpen} color="#586994" />
       <AnimatePresence>
         {isOpen && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} className="fixed left-0 shadow-4xl right-0 top-[3.5rem] p-8 bg-theme-background">
@@ -36,7 +36,7 @@ export const NavMobile = ({ scrollTo }) => {
                       delay: 0.1 + idx / 10,
                     }}
                     key={title}
-                    className="w-full p-[0.08rem] rounded-xl bg-theme-boxes hover:text-theme-hover"
+                    className="w-full rounded-lg bg-theme-background2 text-theme-words hover:bg-theme-hover"
                   >
                     <Link
                       onClick={() => {

@@ -7,7 +7,7 @@ import styles from "./landing.module.scss";
 
 export default function Landing({ scrollTo }) {
   return (
-    <section id="landing" className="h-screen flex flex-col justify-center items-center bg-gray-800 text-white text-center">
+    <section id="landing" className="h-screen flex flex-col justify-center items-center bg-theme-background text-theme-words2 text-center">
       <h1 className="text-4xl font-bold">Joe Marney</h1>
       <h2 className="text-5xl mt-4">Junior Software Engineer</h2>
       <p className="mt-6 text-1xl">Based in the UK</p>

@@ -40,7 +40,7 @@ export default function Contact() {
   });
 
   return (
-    <section id="contact" className="h-screen flex flex-col justify-center items-center bg-gray-200 text-gray-800 text-center">
+    <section id="contact" className="h-screen flex flex-col justify-center items-center bg-theme-background2 text-theme-words text-center">
       <main className={styles.container}>
         <h1 className="text-4xl font-bold">Contact Me</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="my-10">
@@ -51,7 +51,7 @@ export default function Contact() {
               type="text"
               placeholder="Full Name"
               autoComplete="false"
-              className={`w-full px-4 py-3 border-2 placeholder:text-theme-words rounded-md outline-none focus:ring-4 bg-theme-boxes  ${errors.name ? "border-red-600 focus:border-red-600 ring-red-100" : "border-gray-300 focus:border-gray-600 ring-gray-100"}`}
+              className={`w-full px-4 py-3 border-2 placeholder:text-theme-words2 rounded-md outline-none focus:ring-4 bg-theme-boxes  ${errors.name ? "border-red-600 focus:border-red-600 ring-red-100" : "border-gray-300 focus:border-gray-600 ring-gray-100"}`}
               {...register("name", {
                 required: "Enter your name",
                 maxLength: 80,
@@ -74,7 +74,7 @@ export default function Contact() {
               placeholder="Email Address"
               name="email"
               autoComplete="false"
-              className={`w-full px-4 py-3 border-2 placeholder:text-theme-words rounded-md outline-none focus:ring-4 bg-theme-boxes  ${errors.email ? "border-red-600 focus:border-red-600 ring-red-100" : "border-gray-300 focus:border-gray-600 ring-gray-100"}`}
+              className={`w-full px-4 py-3 border-2 placeholder:text-theme-words2 rounded-md outline-none focus:ring-4 bg-theme-boxes  ${errors.email ? "border-red-600 focus:border-red-600 ring-red-100" : "border-gray-300 focus:border-gray-600 ring-gray-100"}`}
               {...register("email", {
                 required: "Enter your email",
                 pattern: {
@@ -94,7 +94,7 @@ export default function Contact() {
             <textarea
               name="message"
               placeholder="Your Message"
-              className={`w-full px-4 py-3 border-2 placeholder:text-theme-words rounded-md outline-none h-36 focus:ring-4 bg-theme-boxes  ${errors.message ? "border-red-600 focus:border-red-600 ring-red-100" : "border-gray-300 focus:border-gray-600 ring-gray-100"}`}
+              className={`w-full px-4 py-3 border-2 placeholder:text-theme-words2 rounded-md outline-none h-36 focus:ring-4 bg-theme-boxes  ${errors.message ? "border-red-600 focus:border-red-600 ring-red-100" : "border-gray-300 focus:border-gray-600 ring-gray-100"}`}
               {...register("message", {
                 required: "Enter your message",
               })}

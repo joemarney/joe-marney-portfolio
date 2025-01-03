@@ -7,13 +7,13 @@ import styles from "./about.module.scss";
 export default function About({ scrollTo }) {
   return (
     <>
-      <section id="about" className="h-screen flex flex-col justify-center items-center bg-gray-200 text-gray-800 text-center">
+      <section id="about" className="h-screen flex flex-col justify-center items-center bg-theme-background2 text-theme-words text-center">
         <h1 className="text-4xl font-bold">About Me</h1>
-        <p className="m-6 text-base max-w-fit">For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to change my career.</p>
-        <p className="m-6 text-base max-w-fit">I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12 week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
+        <p className="mx-6 max-w-fit">For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to change my career.</p>
+        <p className="mx-6 max-w-fit">I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12 week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
         <div className={styles.skillsContainer}>
           <div className="relative group flex flex-col items-center">
-            <Html5Original size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <Html5Original size="50" color="black" className="transition-transform duration-300 group-hover:scale-110" />
             <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-white bg-gray-800 rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">HTML</span>
           </div>
           <div className="relative group flex flex-col items-center">

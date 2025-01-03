@@ -1,7 +1,7 @@
 //! Imports
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { GithubOriginal } from "devicons-react";
+import { FaGithub } from "react-icons/fa";
 
 //! Styles
 import styles from "./projects.module.scss";
@@ -17,7 +17,7 @@ export default function Projects({ title, description, image, timescale, gitHubL
 
   return (
     <main className={styles.container}>
-      <div onClick={openModal} className="cursor-pointer group relative flex flex-col m-6 bg-white shadow-sm border border-slate-200 rounded-lg hover:shadow-lg transition-shadow duration-300">
+      <div onClick={openModal} className="cursor-pointer group relative flex flex-col m-6 bg-theme-background2 shadow-sm rounded-lg hover:shadow-lg transition-shadow duration-300">
         <div className="relative m-2.5 overflow-hidden rounded-md h-56">
           <img className="w-full transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110" src={image} alt={`screenshot of my ${title} app`} />
         </div>
@@ -26,7 +26,7 @@ export default function Projects({ title, description, image, timescale, gitHubL
           <p className="text-theme-words leading-normal font-light">{description}</p>
         </div>
         <Link to={gitHubLink} className="inline-block">
-          <GithubOriginal size="40" />
+          <FaGithub size="40" color="white" />
         </Link>
         {openModalIndex && (
           <div className="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm" onClick={closeModal}>

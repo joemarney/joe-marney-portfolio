@@ -7,7 +7,8 @@ export default {
         transparent: "transparent",
         white: "#ffffff",
         theme: {
-          background: "white",
+          background: "#586994",
+          background2: "#121212",
           boxes: "lightgrey",
           borders: "black",
           buttons: "black",
@@ -15,7 +16,8 @@ export default {
           focus: "blue",
           active: "blue",
           accents: "black",
-          words: "black",
+          words: "#EAEAEA",
+          words2: "black",
         },
       },
       container: {

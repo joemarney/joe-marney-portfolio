@@ -80,7 +80,7 @@ export default function App() {
         <About scrollTo={scrollTo} />
       </section>
 
-      <section ref={projectsRef} id="projects" className="min-h-screen flex flex-col justify-center items-center bg-gray-800 text-white text-center place-items-center overflow-x-hidden">
+      <section ref={projectsRef} id="projects" className="min-h-screen flex flex-col justify-center items-center bg-theme-background text-center place-items-center overflow-x-hidden">
         <h1 className="m-5 text-4xl font-bold text-center">Projects</h1>
         <div className="w-full flex flex-wrap justify-center items-center m-5">
           {projects.map((project, index) => (
@@ -89,7 +89,7 @@ export default function App() {
             </div>
           ))}
         </div>
-        <button className="mt-10 text-white text-2xl animate-bounce focus:outline-none" onClick={() => scrollTo("contact")}>
+        <button className="mt-10 text-theme-words2 text-2xl animate-bounce focus:outline-none" onClick={() => scrollTo("contact")}>
           ↓
         </button>
       </section>
