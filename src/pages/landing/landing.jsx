@@ -10,7 +10,7 @@ export default function Landing({ scrollTo }) {
     <section id="landing" className="h-screen flex flex-col justify-center items-center bg-gray-800 text-white text-center">
       <h1 className="text-4xl font-bold">Joe Marney</h1>
       <h2 className="text-5xl mt-4">Junior Software Engineer</h2>
-      <p className="mt-6 text-1xl">from the UK</p>
+      <p className="mt-6 text-1xl">Based in the UK</p>
       <div className={styles.links}>
         <Link to="https://www.linkedin.com/in/joe-marney/">
           <LinkedinOriginal size="40" />

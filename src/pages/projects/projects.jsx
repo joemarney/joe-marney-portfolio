@@ -17,7 +17,7 @@ export default function Projects({ title, description, image, timescale, gitHubL
 
   return (
     <main className={styles.container}>
-      <div onClick={openModal} className="cursor-pointer group relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg hover:shadow-lg transition-shadow duration-300">
+      <div onClick={openModal} className="cursor-pointer group relative flex flex-col m-6 bg-white shadow-sm border border-slate-200 rounded-lg hover:shadow-lg transition-shadow duration-300">
         <div className="relative m-2.5 overflow-hidden rounded-md h-56">
           <img className="w-full transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110" src={image} alt={`screenshot of my ${title} app`} />
         </div>
@@ -49,7 +49,7 @@ export default function Projects({ title, description, image, timescale, gitHubL
                       </button>
                     </Link>
                   </div>
-                  <div className="relative p-5 leading-normal text-theme-words">
+                  <div className="relative p-5 leading-normal text-theme-words text-justify">
                     {inDepthDescription.split("\n").map((paragraph, index) => (
                       <p key={index} className="mb-3">
                         {paragraph}

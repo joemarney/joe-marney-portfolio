@@ -9,8 +9,8 @@ export default function About({ scrollTo }) {
     <>
       <section id="about" className="h-screen flex flex-col justify-center items-center bg-gray-200 text-gray-800 text-center">
         <h1 className="text-4xl font-bold">About Me</h1>
-        <p className="mt-6 text-lg max-w-2xl">For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to change my career.</p>
-        <p className="mt-6 text-lg max-w-2xl">I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12 week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
+        <p className="m-6 text-base max-w-fit">For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to change my career.</p>
+        <p className="m-6 text-base max-w-fit">I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12 week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
         <div className={styles.skillsContainer}>
           <div className="relative group flex flex-col items-center">
             <Html5Original size="50" className="transition-transform duration-300 group-hover:scale-110" />
