@@ -6,7 +6,7 @@ import { routes } from "./routes";
 
 export const NavDesktop = ({ scrollTo }) => {
   return (
-    <ul className="hidden lg:flex lg:items-center gap-12 text-sm">
+    <ul className="hidden lg:flex lg:items-center gap-12 text-md text-theme-background">
       {routes.map((route) => {
         const { Icon, to, title } = route;
         return (

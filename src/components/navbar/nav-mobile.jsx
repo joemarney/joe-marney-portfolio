@@ -36,7 +36,7 @@ export const NavMobile = ({ scrollTo }) => {
                       delay: 0.1 + idx / 10,
                     }}
                     key={title}
-                    className="w-full rounded-lg bg-theme-background2 text-theme-words hover:bg-theme-hover"
+                    className="w-full rounded-lg bg-theme-background2 text-theme-words transition-all duration-300 hover:bg-theme-hover hover:text-theme-words2"
                   >
                     <Link
                       onClick={() => {
