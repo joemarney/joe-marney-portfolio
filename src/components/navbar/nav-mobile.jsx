@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 //! Routes
 import { routes } from "./routes";
 
-export const NavMobile = ({ scrollTo }) => {
+export const NavMobile = ({ scrollTo, setIsNavbarVisible }) => {
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
 
@@ -17,10 +17,10 @@ export const NavMobile = ({ scrollTo }) => {
 
   return (
     <div ref={ref} className="lg:hidden ">
-      <Hamburger toggled={isOpen} size={20} toggle={setOpen} color="#586994" />
+      <Hamburger toggled={isOpen} size={20} toggle={setOpen} color="#EAEAEA" />
       <AnimatePresence>
         {isOpen && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} className="fixed left-0 shadow-4xl right-0 top-[3.5rem] p-8 bg-theme-background">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} className="fixed left-0 shadow-4xl right-0 top-[3.5rem] p-8 bg-theme-background2">
             <ul className="grid gap-2">
               {routes.map((route, idx) => {
                 const { Icon, to, title } = route;
@@ -36,19 +36,19 @@ export const NavMobile = ({ scrollTo }) => {
                       delay: 0.1 + idx / 10,
                     }}
                     key={title}
-                    className="w-full rounded-lg bg-theme-background2 text-theme-words transition-all duration-300 hover:bg-theme-hover hover:text-theme-words2"
+                    className="w-full text-theme-words transition-all duration-300 hover:text-theme-hover"
                   >
                     <Link
                       onClick={() => {
                         scrollTo(to);
                         setOpen((prev) => !prev);
+                        setTimeout(() => setIsNavbarVisible(false), 300);
                       }}
-                      className={"flex items-center justify-between w-full p-5 rounded-xl cursor-pointer"}
-                      to={to}
+                      className={"flex items-center justify-center w-full p-5 rounded-xl cursor-pointer"}
                       duration={500}
                     >
-                      <span className="flex gap-1 text-lg">{title}</span>
-                      <Icon className="text-xl" />
+                      <Icon className="text-xl mx-5" />
+                      <span className="text-lg">{title}</span>
                     </Link>
                   </motion.li>
                 );

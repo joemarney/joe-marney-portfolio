@@ -12,7 +12,7 @@ export default {
           boxes: "lightgrey",
           borders: "black",
           buttons: "black",
-          hover: "lightblue",
+          hover: "#586994",
           focus: "blue",
           active: "blue",
           accents: "black",

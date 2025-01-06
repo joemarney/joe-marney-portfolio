@@ -136,7 +136,7 @@ export default function App() {
 
   return (
     <main className="snap-y snap-mandatory h-screen overflow-scroll">
-      <NavBar scrollTo={scrollTo} isVisible={isNavbarVisible} />
+      <NavBar scrollTo={scrollTo} isNavbarVisible={isNavbarVisible} setIsNavbarVisible={setIsNavbarVisible} />
 
       <section className="snap-start" ref={(el) => (sectionsRef.current[0] = el)}>
         <Landing scrollTo={scrollTo} />
@@ -146,16 +146,18 @@ export default function App() {
         <About scrollTo={scrollTo} />
       </section>
 
-      <section ref={(el) => (sectionsRef.current[2] = el)} id="projects" className="min-h-screen flex flex-col justify-center items-center bg-theme-background text-center place-items-center overflow-x-hidden snap-start">
+      <section ref={(el) => (sectionsRef.current[2] = el)} id="projects" className="h-screen flex flex-col justify-center items-center bg-theme-background text-center place-items-center snap-start">
         <h1 className="m-5 text-4xl font-bold text-center">projects</h1>
-        <div className="w-full flex flex-wrap sm:justify-center md:justify-center">
+
+        <div className="w-full flex overflow-x-auto snap-x snap-mandatory sm:flex-wrap sm:justify-center md:justify-center">
           {projects.map((project, index) => (
-            <div key={index} className="flex-shrink-0 w-full sm:w-80 md:w-96 lg:w-1/3 xl:w-1/4">
+            <div key={index} className="flex-shrink-0 w-80 snap-center sm:w-80 md:w-96 lg:w-1/3 xl:w-1/4">
               <Projects {...project} openModalIndex={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
             </div>
           ))}
         </div>
-        <button className="mt-10 text-theme-words2 text-5xl animate-bounce focus:outline-none" onClick={() => scrollTo("contact")}>
+
+        <button className="mt-10 text-theme-words2 text-5xl animate-bounce" onClick={() => scrollTo("contact")}>
           ↓
         </button>
       </section>
@@ -171,7 +173,7 @@ export default function App() {
       </div> */}
       {isButtonVisible && (
         <div className={`fixed bottom-6 right-6 transition-opacity duration-300 animate-bounce ${isButtonVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
-          <button onClick={() => document.getElementById("landing").scrollIntoView({ behavior: "smooth" })} className="bg-theme-buttons p-4 rounded-full text-white shadow-md hover:shadow-lg transition-all">
+          <button onClick={() => document.getElementById("landing").scrollIntoView({ behavior: "smooth" })} className="bg-theme-buttons p-4 rounded-full text-theme-words shadow-md hover:bg-theme-hover hover:text-theme-words2 transition-all">
             <FaArrowUp />
           </button>
         </div>

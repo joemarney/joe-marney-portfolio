@@ -29,10 +29,10 @@ export default function Projects({ title, description, image, timescale, gitHubL
           <FaGithub size="40" color="white" />
         </Link>
         {openModalIndex && (
-          <div className="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm" onClick={closeModal}>
+          <div className="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-theme-background2 bg-opacity-60 backdrop-blur-sm" onClick={closeModal}>
             <div className="relative m-4 p-4 w-full sm:w-3/4 max-h-screen overflow-y-auto rounded-lg bg-white shadow-sm" onClick={(e) => e.stopPropagation()}>
-              <div className="fixed inset-0 z-[999] grid place-items-center bg-black bg-opacity-60 backdrop-blur-sm">
-                <div className="relative m-4 p-6 w-full sm:w-3/4 max-h-screen overflow-y-auto rounded-lg bg-white shadow-sm">
+              <div className="fixed inset-0 z-[999] grid place-items-center bg-theme-background2 bg-opacity-60 backdrop-blur-sm">
+                <div className="relative m-4 p-6 w-full sm:w-3/4 max-h-screen overflow-y-auto rounded-lg bg-theme-background2 shadow-sm">
                   <div>
                     <h1 className="text-theme-words">{title}</h1>
                   </div>
@@ -49,19 +49,19 @@ export default function Projects({ title, description, image, timescale, gitHubL
                       </button>
                     </Link>
                   </div>
-                  <div className="relative p-5 leading-normal text-theme-words text-justify">
+                  <div className="relative p-5 leading-normal text-theme-words text-left">
                     {inDepthDescription.split("\n").map((paragraph, index) => (
                       <p key={index} className="mb-3">
                         {paragraph}
                       </p>
                     ))}
                   </div>
-                  <h2 className="text-lg font-semibold text-theme-words">Technologies used</h2>
+                  <h2 className="text-lg font-semibold text-theme-words">technologies used</h2>
                   <div className={styles.technologies}>
                     {technologies.map(({ Icon, label }, index) => (
-                      <div key={index}>
-                        <Icon size="40" />
-                        <p className="text-sm text-theme-words px-3">{label}</p>
+                      <div key={index} className="relative flex flex-col items-center group">
+                        <Icon size="50" color="black" className="transition-transform duration-300 group-hover:scale-110 m-10" />
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 opacity-0 text-sm font-medium text-theme-words2 bg-theme-background rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">{label}</span>
                       </div>
                     ))}
                   </div>
