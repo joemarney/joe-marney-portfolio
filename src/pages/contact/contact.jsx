@@ -107,7 +107,7 @@ export default function Contact() {
             )}
           </div>
 
-          <button type="submit" className="w-full py-4 font-semibold text-white transition-colors bg-theme-buttons rounded-md hover:bg-theme-hover focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7">
+          <button type="submit" className="w-full py-4 font-semibold text-white transition-colors bg-theme-buttons rounded-md hover:bg-theme-hover hover:text-theme-words2 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7">
             {isSubmitting ? (
               <svg className="w-5 h-5 mx-auto text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>

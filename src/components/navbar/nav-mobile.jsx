@@ -42,7 +42,7 @@ export const NavMobile = ({ scrollTo, setIsNavbarVisible }) => {
                       onClick={() => {
                         scrollTo(to);
                         setOpen((prev) => !prev);
-                        setTimeout(() => setIsNavbarVisible(false), 300);
+                        setTimeout(() => setIsNavbarVisible(false), 500);
                       }}
                       className={"flex items-center justify-center w-full p-5 rounded-xl cursor-pointer"}
                       duration={500}

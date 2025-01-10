@@ -6,17 +6,17 @@ import { IoLibraryOutline } from "react-icons/io5";
 
 export const routes = [
   {
-    title: "About",
+    title: "about",
     to: "about",
     Icon: BiUser,
   },
   {
-    title: "Projects",
+    title: "projects",
     to: "projects",
     Icon: IoLibraryOutline,
   },
   {
-    title: "Contact",
+    title: "contact",
     to: "contact",
     Icon: PiChatCircleBold,
   },

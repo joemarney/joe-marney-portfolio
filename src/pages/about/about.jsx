@@ -1,5 +1,6 @@
 //! Imports
-import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, ExpressOriginal, MongodbOriginal, NpmOriginalWordmark, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal, PypiOriginal } from "devicons-react";
+import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, MongodbOriginal, NpmOriginalWordmark, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal, PypiOriginal } from "devicons-react";
+import { SiExpress } from "react-icons/si";
 
 //! Styles
 import styles from "./about.module.scss";
@@ -9,7 +10,7 @@ export default function About({ scrollTo }) {
     <main className={styles.container}>
       <section id="about" className="h-screen flex flex-col justify-center items-center bg-theme-background2 text-theme-words text-center px-40">
         <h1 className="text-4xl font-bold mb-10">about me</h1>
-        <p>For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to change my career.</p>
+        <p>For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to evolve my career.</p>
         <p>I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12 week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
         <div className={styles.skillsContainer}>
           <div className="relative group flex flex-col items-center">
@@ -29,7 +30,7 @@ export default function About({ scrollTo }) {
             <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-theme-words2 bg-theme-background rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Node.js</span>
           </div>
           <div className="relative group flex flex-col items-center">
-            <ExpressOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
+            <SiExpress size="50" color="#EAEAEA" className="transition-transform duration-300 group-hover:scale-110" />
             <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-theme-words2 bg-theme-background rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Express</span>
           </div>
           <div className="relative group flex flex-col items-center">

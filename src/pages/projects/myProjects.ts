@@ -1,5 +1,6 @@
 //! Imports
-import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, ExpressOriginal, MongodbOriginal, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal } from "devicons-react";
+import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, MongodbOriginal, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal } from "devicons-react";
+import { SiExpress } from "react-icons/si";
 
 export const projects = [
   {
@@ -31,7 +32,7 @@ export const projects = [
       { Icon: Css3Original, label: "CSS" },
       { Icon: JavascriptOriginal, label: "JavaScript" },
       { Icon: NodejsOriginal, label: "Node.js" },
-      { Icon: ExpressOriginal, label: "Express" },
+      { Icon: SiExpress, label: "Express" },
       { Icon: MongodbOriginal, label: "MongoDB" },
       { Icon: NetlifyOriginal, label: "Netlify" },
     ],
