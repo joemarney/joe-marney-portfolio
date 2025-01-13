@@ -2,16 +2,25 @@
 import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, MongodbOriginal, NpmOriginalWordmark, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal, PypiOriginal } from "devicons-react";
 import { SiExpress } from "react-icons/si";
 
+//! Components
+import Accordion from "../../components/accordian/accordian";
+
 //! Styles
 import styles from "./about.module.scss";
 
 export default function About({ scrollTo }) {
   return (
     <main className={styles.container}>
-      <section id="about" className="h-screen flex flex-col justify-center items-center bg-theme-background2 text-theme-words text-center px-40">
-        <h1 className="text-4xl font-bold mb-10">about me</h1>
-        <p>For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving and innovation. I love to learn and challenge myself so I made the decision to evolve my career.</p>
-        <p>I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12 week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
+      <section id="about" className="min-h-screen flex flex-col justify-center items-center bg-theme-background2 text-theme-words px-40">
+        <h1 className="text-4xl font-bold text-center mt-5">about me</h1>
+        <div>
+          <p>For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving, and innovation. I love to learn and challenge myself, so I made the decision to evolve my career.</p>
+          <p>I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12-week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
+        </div>
+        <div className={styles.hobbies}>
+          <h1 className="text-center">hobbies</h1>
+          <Accordion />
+        </div>
         <div className={styles.skillsContainer}>
           <div className="relative group flex flex-col items-center">
             <Html5Original size="50" color="black" className="transition-transform duration-300 group-hover:scale-110" />

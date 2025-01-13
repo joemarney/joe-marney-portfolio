@@ -10,10 +10,6 @@
     flex-direction: column;
     margin: 10px;
     padding: 20px;
-    // svg {
-    //   width: 80px;
-    //   height: 80px;
-    // }
   }
 }
 
@@ -23,10 +19,19 @@
       padding: 0px;
       h1 {
         font-size: 30px;
-        margin-bottom: 5px;
       }
       p {
         margin: 5px 30px;
+      }
+    }
+    .hobbies {
+      svg {
+        width: 30px;
+      }
+      img {
+        max-height: 300px;
+        max-width: 300px;
+        border-radius: 20px;
       }
     }
   }
@@ -34,9 +39,10 @@
     margin-top: 0px;
     div {
       margin: 0;
+      padding: 10px;
       svg {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
       }
     }
   }
@@ -51,6 +57,19 @@
       }
       p {
         margin: 10px 200px;
+      }
+    }
+    .hobbies {
+      h2 {
+        font-size: 30px;
+      }
+      svg {
+        width: 40px;
+      }
+      img {
+        max-height: 400px;
+        max-width: 400px;
+        border-radius: 20px;
       }
     }
   }
@@ -75,6 +94,19 @@
       }
       p {
         margin: 10px 200px;
+      }
+    }
+    .hobbies {
+      h2 {
+        font-size: 36px;
+      }
+      svg {
+        width: 60px;
+      }
+      img {
+        max-height: 500px;
+        max-width: 500px;
+        border-radius: 20px;
       }
     }
   }

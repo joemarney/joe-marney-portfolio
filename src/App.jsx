@@ -147,7 +147,7 @@ export default function App() {
       </section>
 
       <section ref={(el) => (sectionsRef.current[2] = el)} id="projects" className="h-screen flex flex-col justify-center items-center bg-theme-background text-center place-items-center snap-start">
-        <h1 className="m-5 text-4xl font-bold text-center">projects</h1>
+        <h1 className="m-5 text-4xl font-bold">projects</h1>
 
         <div className="w-full flex overflow-x-auto snap-x snap-mandatory sm:flex-wrap sm:justify-center md:justify-center">
           {projects.map((project, index) => (
