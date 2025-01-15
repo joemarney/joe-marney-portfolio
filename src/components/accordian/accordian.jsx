@@ -12,13 +12,13 @@ export default function Accordion() {
   };
 
   return (
-    <div className="mb-2">
+    <div className="flex flex-row">
       {items.map((item, index) => {
         const { Extend, Collapse } = item;
         return (
           <div key={index}>
-            <div className="flex justify-evenly items-center cursor-pointer" onClick={() => toggleAccordion(index)}>
-              <h2>{item.title}</h2>
+            <div className="flex cursor-pointer" onClick={() => toggleAccordion(index)}>
+              <p>{item.title}</p>
               <span className="p-1">{openIndex === index ? <Extend size="50px" color="#586994" /> : <Collapse size="50px" color="#586994" />}</span>
             </div>
             <div

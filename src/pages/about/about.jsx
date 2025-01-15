@@ -4,6 +4,7 @@ import { SiExpress } from "react-icons/si";
 
 //! Components
 import Accordion from "../../components/accordian/accordian";
+import HobbiesTabs from "../../components/accordian/hobbiesTabs";
 
 //! Styles
 import styles from "./about.module.scss";
@@ -16,10 +17,6 @@ export default function About({ scrollTo }) {
         <div>
           <p>For 8 years I worked in the Aerospace industry. There I developed my understanding of precision, problem-solving, and innovation. I love to learn and challenge myself, so I made the decision to evolve my career.</p>
           <p>I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12-week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
-        </div>
-        <div className={styles.hobbies}>
-          <h1 className="text-center">hobbies</h1>
-          <Accordion />
         </div>
         <div className={styles.skillsContainer}>
           <div className="relative group flex flex-col items-center">
@@ -86,6 +83,10 @@ export default function About({ scrollTo }) {
             <PypiOriginal size="50" className="transition-transform duration-300 group-hover:scale-110" />
             <span className="absolute bottom-0 translate-y-8 opacity-0 text-sm font-medium text-theme-words2 bg-theme-background rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">Pypi</span>
           </div>
+        </div>
+        <div className={styles.hobbies}>
+          <h1 className="text-center">hobbies</h1>
+          <HobbiesTabs />
         </div>
         <button className="mt-10 text-5xl animate-bounce focus:outline-none" onClick={() => scrollTo("projects")}>
           ↓
