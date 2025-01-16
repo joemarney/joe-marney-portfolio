@@ -6,7 +6,7 @@ import { PiPersonSimpleWalkFill } from "react-icons/pi";
 import { TbCampfire } from "react-icons/tb";
 import { TbCampfireFilled } from "react-icons/tb";
 
-export const items = [
+export const hobbies = [
   {
     title: "gaming",
     content: "As long as I can remember, I have always had a controller in my hands! I love the Dark Souls series and am currently playing DS2. My favorite games of all time are: Minecraft, Elden Ring, Dark Souls 3, Pokémon Emerald, and Pokémon Platinum.",

@@ -2,6 +2,9 @@
 import { Link } from "react-router-dom";
 import { LinkedinPlain, GithubOriginal } from "devicons-react";
 
+//! Animations
+import Wrapper from "../../components/animations/wrapper";
+
 //! Styles
 import styles from "./landing.module.scss";
 
@@ -19,7 +22,7 @@ export default function Landing({ scrollTo }) {
           <GithubOriginal size="40" />
         </Link>
       </div>
-      <button className="mt-10 text-5xl animate-bounce focus:outline-none" onClick={() => scrollTo("about")}>
+      <button className="mt-10 text-5xl animate-bounce focus:outline-none" onClick={() => scrollTo("skills")}>
         ↓
       </button>
     </section>

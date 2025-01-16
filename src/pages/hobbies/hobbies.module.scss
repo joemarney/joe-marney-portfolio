@@ -1,0 +1,44 @@
+@media (min-width: 300px) {
+  .hobbies {
+    svg {
+      width: 30px;
+    }
+    img {
+      max-height: 300px;
+      max-width: 300px;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hobbies {
+    h2 {
+      font-size: 30px;
+    }
+    svg {
+      width: 40px;
+    }
+    img {
+      max-height: 400px;
+      max-width: 400px;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .hobbies {
+    h2 {
+      font-size: 36px;
+    }
+    svg {
+      width: 60px;
+    }
+    img {
+      max-height: 500px;
+      max-width: 500px;
+      border-radius: 20px;
+    }
+  }
+}

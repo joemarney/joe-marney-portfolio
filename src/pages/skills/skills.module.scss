@@ -1,0 +1,44 @@
+.skillsContainer {
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 300px) {
+  .skillsContainer {
+    div {
+      gap: 40px;
+      svg {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .skillsContainer {
+    div {
+      gap: 80px;
+      svg {
+        height: 70px;
+        width: 70px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .skillsContainer {
+    div {
+      gap: 100px;
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}

@@ -1,14 +1,14 @@
 //! Imports
 import { Tabs, TabsHeader, TabsBody, Tab, TabPanel } from "@material-tailwind/react";
 
-//! Items
-import { items } from "./items";
+//! Hobbies
+import { hobbies } from "./hobbies";
 
 export default function HobbiesTabs() {
   return (
     <Tabs id="custom-animation" value="gaming">
       <TabsHeader className="bg-theme-background">
-        {items.map(({ title, Extend }) => (
+        {hobbies.map(({ title, Extend }) => (
           <Tab key={title} value={title}>
             {title}
             <Extend />
@@ -22,8 +22,8 @@ export default function HobbiesTabs() {
           unmount: { y: 250 },
         }}
       >
-        {items.map(({ title, content, img }) => (
-          <TabPanel key={title} value={title} className="flex flex-col items-center">
+        {hobbies.map(({ title, content, img }) => (
+          <TabPanel key={title} value={title} className="flex flex-col items-center text-theme-words">
             <p>{content}</p>
             {img && <img src={img} />}
           </TabPanel>
