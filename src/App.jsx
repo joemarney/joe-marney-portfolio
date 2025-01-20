@@ -1,7 +1,6 @@
 //! Imports
 import { useState, useRef, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 //! Components
 import NavBar from "./components/navbar/navbar";
@@ -16,6 +15,10 @@ import Hobbies from "./pages/hobbies/hobbies.jsx";
 
 //! Projects
 import { projects } from "./pages/projects/myProjects.ts";
+
+//! Animations
+import Wrapper from "./components/animations/wrapper.jsx";
+import { fadeScale } from "./components/animations/animations.js";
 
 export default function App() {
   const [openModalIndex, setOpenModalIndex] = useState(null);
@@ -82,38 +85,17 @@ export default function App() {
       </section>
 
       <section ref={(el) => (sectionsRef.current[2] = el)} id="projects" className="h-screen flex flex-col justify-center items-center bg-theme-background text-center place-items-center snap-start">
-        <h1 className="m-5 text-4xl font-bold">projects</h1>
+        <Wrapper animation={fadeScale}>
+          <h1 className="m-20 text-4xl font-bold">projects</h1>
+        </Wrapper>
 
-        <motion.div
-          className="w-full flex overflow-x-auto snap-x snap-mandatory sm:flex-wrap sm:justify-center md:justify-center"
-          initial="hidden"
-          animate="visible"
-          viewport={{ once: false, amount: 0.2 }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.3,
-              },
-            },
-          }}
-        >
+        <div className="w-full flex overflow-x-auto snap-x snap-mandatory sm:flex-wrap sm:justify-center md:justify-center">
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="flex-shrink-0 w-80 snap-center sm:w-80 md:w-96 lg:w-1/3 xl:w-1/4"
-              variants={{
-                hidden: { opacity: 0, scale: 0.8 },
-                visible: { opacity: 1, scale: 1 },
-              }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
+            <div key={index} className="flex-shrink-0 w-80 snap-center sm:w-80 md:w-96 lg:w-1/3 xl:w-1/4">
               <Projects {...project} openModalIndex={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         <button className="mt-10 text-theme-words2 text-5xl animate-bounce" onClick={() => scrollTo("about")}>
           ↓

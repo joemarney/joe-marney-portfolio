@@ -1,48 +1,12 @@
-.skillsContainer {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10px;
-    padding: 20px;
-  }
-}
-
 @media (min-width: 300px) {
   .container {
     section {
-      padding: 0px;
+      padding: 40px;
       h1 {
         font-size: 30px;
       }
       p {
         margin: 5px 30px;
-      }
-    }
-    .hobbies {
-      svg {
-        width: 30px;
-      }
-      img {
-        max-height: 300px;
-        max-width: 300px;
-        border-radius: 20px;
-      }
-    }
-  }
-  .skillsContainer {
-    margin-top: 0px;
-    div {
-      margin: 0;
-      padding: 10px;
-      svg {
-        height: 40px;
-        width: 40px;
       }
     }
   }
@@ -51,35 +15,11 @@
 @media (min-width: 1000px) {
   .container {
     section {
-      padding: 20px;
       h1 {
         font-size: 36px;
       }
       p {
         margin: 10px 200px;
-      }
-    }
-    .hobbies {
-      h2 {
-        font-size: 30px;
-      }
-      svg {
-        width: 40px;
-      }
-      img {
-        max-height: 400px;
-        max-width: 400px;
-        border-radius: 20px;
-      }
-    }
-  }
-  .skillsContainer {
-    margin-top: 0px;
-    div {
-      margin: 0px;
-      svg {
-        height: 70px;
-        width: 70px;
       }
     }
   }
@@ -88,36 +28,11 @@
 @media (min-width: 1500px) {
   .container {
     section {
-      padding: 40px;
       h1 {
         font-size: 36px;
       }
       p {
         margin: 10px 200px;
-      }
-    }
-    .hobbies {
-      h2 {
-        font-size: 36px;
-      }
-      svg {
-        width: 60px;
-      }
-      img {
-        max-height: 500px;
-        max-width: 500px;
-        border-radius: 20px;
-      }
-    }
-  }
-  .skillsContainer {
-    margin-top: 40px;
-    div {
-      margin: 10px;
-      padding: 20px;
-      svg {
-        width: 80px;
-        height: 80px;
       }
     }
   }

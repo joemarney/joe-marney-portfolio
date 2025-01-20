@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 //! Styles
 import styles from "./projects.module.scss";
@@ -17,7 +18,7 @@ export default function Projects({ title, description, image, timescale, gitHubL
 
   return (
     <main className={styles.container}>
-      <div onClick={openModal} className="cursor-pointer group relative flex flex-col m-6 bg-theme-background2 shadow-sm rounded-lg hover:shadow-lg transition-shadow duration-300">
+      <div onClick={openModal} className="cursor-pointer group relative flex flex-col m-6 bg-theme-background2 shadow-sm rounded-lg hover:shadow-lg transition-shadow duration-300 justify-center items-center">
         <div className="relative m-2.5 overflow-hidden rounded-md h-56">
           <img className="w-full transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110" src={image} alt={`screenshot of my ${title} app`} />
         </div>
@@ -25,9 +26,14 @@ export default function Projects({ title, description, image, timescale, gitHubL
           <h6 className="mb-2 text-theme-words text-xl font-semibold">{title}</h6>
           <p className="text-theme-words leading-normal font-light">{description}</p>
         </div>
-        <Link to={gitHubLink} className="inline-block">
-          <FaGithub size="40" color="white" />
-        </Link>
+        <div className="flex flex-row justify-center items-center p-1">
+          <Link to={gitHubLink}>
+            <FaGithub size="35" color="white" />
+          </Link>
+          <Link to={deployedLink}>
+            <FaExternalLinkAlt size="25" color="white" />
+          </Link>
+        </div>
         {openModalIndex && (
           <div className="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-theme-background2 bg-opacity-60 backdrop-blur-sm" onClick={closeModal}>
             <div className="relative m-4 p-4 w-full sm:w-3/4 max-h-screen overflow-y-auto rounded-lg bg-white shadow-sm" onClick={(e) => e.stopPropagation()}>
@@ -41,13 +47,6 @@ export default function Projects({ title, description, image, timescale, gitHubL
                   </div>
                   <div className="relative px-5 leading-normal text-theme-words">
                     <em>{timescale}</em>
-                  </div>
-                  <div className="flex justify-center mt-2.5">
-                    <Link to={deployedLink}>
-                      <button className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" type="button">
-                        Check it out
-                      </button>
-                    </Link>
                   </div>
                   <div className="relative p-5 leading-normal text-theme-words text-left">
                     {inDepthDescription.split("\n").map((paragraph, index) => (

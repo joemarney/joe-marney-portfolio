@@ -4,6 +4,11 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 export default withMT({
   content: ["./index.html", "./src/**/*.{ts,jsx,js}", "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}", "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: "300px",
+      md: "1000px",
+      lg: "1500px",
+    },
     extend: {
       colors: {
         transparent: "transparent",
@@ -11,13 +16,8 @@ export default withMT({
         theme: {
           background: "#586994",
           background2: "#121212",
-          boxes: "lightgrey",
-          borders: "black",
           buttons: "black",
           hover: "#586994",
-          focus: "blue",
-          active: "blue",
-          accents: "black",
           words: "#EAEAEA",
           words2: "black",
         },

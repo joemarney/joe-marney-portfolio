@@ -6,12 +6,16 @@ import { hobbies } from "./hobbies";
 
 export default function HobbiesTabs() {
   return (
-    <Tabs id="custom-animation" value="gaming">
-      <TabsHeader className="bg-theme-background">
-        {hobbies.map(({ title, Extend }) => (
-          <Tab key={title} value={title}>
-            {title}
-            <Extend />
+    <Tabs id="custom-animation" value="gaming" className="flex flex-col">
+      <TabsHeader
+        className="bg-theme-background"
+        indicatorProps={{
+          className: "bg-theme-words",
+        }}
+      >
+        {hobbies.map(({ title, Icon }) => (
+          <Tab key={title} value={title} className="text-theme-words2">
+            <Icon size="40" />
           </Tab>
         ))}
       </TabsHeader>
@@ -23,7 +27,8 @@ export default function HobbiesTabs() {
         }}
       >
         {hobbies.map(({ title, content, img }) => (
-          <TabPanel key={title} value={title} className="flex flex-col items-center text-theme-words">
+          <TabPanel key={title} value={title} className="flex flex-col justify-center items-center text-start text-theme-words2 font-medium leading-normal min-h-[600px]">
+            <h2>{title}</h2>
             <p>{content}</p>
             {img && <img src={img} />}
           </TabPanel>
