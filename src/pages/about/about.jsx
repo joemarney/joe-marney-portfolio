@@ -16,8 +16,8 @@ export default function About({ scrollTo }) {
           <h2 className="text-theme-background mb-2 font-bold">Manufacturing Engineer</h2>
           <p>
             <Wrapper animation={fadeDown}>For 8 years, I worked for a leading aerospace company, building and repairing defense systems for the MOD and governments worldwide. There I developed my understanding of</Wrapper>
-            <span className="text-theme-background font-bold inline"> precision, problem-solving, and innovation</span>
-            <Wrapper animation={fadeDown}>. I contributed to confidential and time-sensitive projects where attention to detail was critical.</Wrapper>
+            <span className="text-theme-background font-bold inline"> precision, problem-solving, and innovation.</span>
+            <Wrapper animation={fadeDown}> I contributed to confidential and time-sensitive projects where attention to detail was critical.</Wrapper>
             <br></br>
             <Wrapper animation={fadeDown}>I've always had a passion for learning and personal growth. So I decided to evolve my career and explore a new field where I could continue to solve problems and build solutions.</Wrapper>
           </p>

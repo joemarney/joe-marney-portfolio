@@ -3,7 +3,7 @@ import HobbiesTabs from "../../components/hobbies/tabs";
 
 //! Animations
 import Wrapper from "../../components/animations/wrapper";
-import { fadeScale } from "../../components/animations/animations";
+import { fadeScale, fadeUp } from "../../components/animations/animations";
 
 //! Styles
 import styles from "./hobbies.module.scss";
@@ -14,9 +14,11 @@ export default function Hobbies({ scrollTo }) {
       <Wrapper animation={fadeScale}>
         <h1 className="text-4xl font-bold text-center mt-20 mb-10">hobbies</h1>
       </Wrapper>
-      <div className={styles.hobbies}>
-        <HobbiesTabs />
-      </div>
+      <Wrapper animation={fadeUp}>
+        <div className={styles.hobbies}>
+          <HobbiesTabs />
+        </div>
+      </Wrapper>
       <button className="mb-5 text-5xl animate-bounce focus:outline-none" onClick={() => scrollTo("contact")}>
         ↓
       </button>

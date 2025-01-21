@@ -25,7 +25,7 @@ export default function Landing({ scrollTo }) {
       </Wrapper>
       <Wrapper animation={fadeLeft}>
         <div className={styles.links}>
-          <motion.div whileHover={{ scale: 1.2, rotate: 10, color: "#0077b5" }} transition={{ type: "spring", stiffness: 300 }}>
+          <motion.div whileHover={{ scale: 1.2, rotate: 10, color: "#0077B5" }} transition={{ type: "spring", stiffness: 300 }}>
             <Link to="https://www.linkedin.com/in/joe-marney/">
               <FaLinkedin size="60" />
             </Link>

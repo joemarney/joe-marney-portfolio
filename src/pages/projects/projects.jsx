@@ -7,7 +7,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 //! Styles
 import styles from "./projects.module.scss";
 
-export default function Projects({ title, description, image, timescale, gitHubLink, deployedLink, technologies, inDepthDescription, openModalIndex, openModal, closeModal }) {
+export default function Projects({ title, description, thumbnail, video, timescale, gitHubLink, deployedLink, technologies, inDepthDescription, openModalIndex, openModal, closeModal }) {
   useEffect(() => {
     document.body.style.overflow = openModalIndex ? "hidden" : "";
 
@@ -20,10 +20,10 @@ export default function Projects({ title, description, image, timescale, gitHubL
     <main className={styles.container}>
       <div onClick={openModal} className="cursor-pointer group relative flex flex-col m-6 bg-theme-background2 shadow-sm rounded-lg hover:shadow-lg transition-shadow duration-300 justify-center items-center">
         <div className="relative m-2.5 overflow-hidden rounded-md h-56">
-          <img className="w-full transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110" src={image} alt={`screenshot of my ${title} app`} />
+          <img className="w-full transition-transform duration-500 ease-[cubic-bezier(0.25, 1, 0.5, 1)] transform group-hover:scale-110" src={thumbnail} alt={`screenshot of my ${title} app`} />
         </div>
         <div className="p-4">
-          <h6 className="mb-2 text-theme-words text-xl font-semibold">{title}</h6>
+          <h1 className="mb-2 text-theme-words text-xl font-semibold">{title}</h1>
           <p className="text-theme-words leading-normal font-light">{description}</p>
         </div>
         <div className="flex flex-row justify-center items-center p-1">
@@ -43,7 +43,7 @@ export default function Projects({ title, description, image, timescale, gitHubL
                     <h1 className="text-theme-words">{title}</h1>
                   </div>
                   <div className="flex relative m-2.5 rounded-md justify-center">
-                    <img src={image} alt={`screenshot of ${title}`} className="h-auto w-50 object-cover rounded-md" />
+                    <img src={video} alt={`screen recording of ${title}`} className="h-[400px] w-auto object-cover rounded-sm" />
                   </div>
                   <div className="relative px-5 leading-normal text-theme-words">
                     <em>{timescale}</em>
@@ -58,9 +58,9 @@ export default function Projects({ title, description, image, timescale, gitHubL
                   <h2 className="text-lg font-semibold text-theme-words">technologies used</h2>
                   <div className={styles.technologies}>
                     {technologies.map(({ Icon, label }, index) => (
-                      <div key={index} className="relative flex flex-col items-center group">
-                        <Icon size="50" color={label === "Express" ? "#EAEAEA" : undefined} className="transition-transform duration-300 group-hover:scale-110 m-10" />
-                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 opacity-0 text-sm font-medium text-theme-words2 bg-theme-background rounded-md px-2 py-1 transition-all duration-300 group-hover:translate-y-2 group-hover:opacity-100">{label}</span>
+                      <div key={index}>
+                        <Icon size="50" color={label === "Express" ? "#EAEAEA" : undefined} />
+                        <p className="text-theme-words mx-5">{label}</p>
                       </div>
                     ))}
                   </div>
