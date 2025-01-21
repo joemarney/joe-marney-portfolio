@@ -3,7 +3,7 @@ import styles from "./about.module.scss";
 
 //! Animations
 import Wrapper from "../../components/animations/wrapper";
-import { fadeScale } from "../../components/animations/animations";
+import { fadeScale, fadeDown } from "../../components/animations/animations";
 
 export default function About({ scrollTo }) {
   return (
@@ -13,10 +13,24 @@ export default function About({ scrollTo }) {
           <h1 className="text-4xl font-bold text-center m-10">about me</h1>
         </Wrapper>
         <div>
-          <h2 className="mb-2">Manufacturing Engineer</h2>
-          <p>For 8 years I worked for a leading company in the Aerospace industry. I was building defense systems for the MOD and governments across the globe. There I developed my understanding of precision, problem-solving, and innovation. I love to learn and challenge myself, so I made the decision to evolve my career.</p>
-          <h2 className="mb-2 mt-2">Software Engineer</h2>
-          <p>I completed the General Assembly: Software Engineering Immersive Bootcamp. This intensive 12-week course expanded my technical skill set and reinforced my passion for building solutions and solving complex issues.</p>
+          <h2 className="text-theme-background mb-2 font-bold">Manufacturing Engineer</h2>
+          <p>
+            <Wrapper animation={fadeDown}>For 8 years, I worked for a leading aerospace company, building and repairing defense systems for the MOD and governments worldwide. There I developed my understanding of</Wrapper>
+            <span className="text-theme-background font-bold inline"> precision, problem-solving, and innovation</span>
+            <Wrapper animation={fadeDown}>. I contributed to confidential and time-sensitive projects where attention to detail was critical.</Wrapper>
+            <br></br>
+            <Wrapper animation={fadeDown}>I've always had a passion for learning and personal growth. So I decided to evolve my career and explore a new field where I could continue to solve problems and build solutions.</Wrapper>
+          </p>
+          <h2 className="text-theme-background mt-4 mb-2 font-bold">Software Engineer</h2>
+          <p>
+            <Wrapper animation={fadeDown}>I took a leap and completed the</Wrapper>
+            <span className="text-theme-background font-bold inline"> Software Engineering Immersive Bootcamp</span>
+            <Wrapper animation={fadeDown}> with</Wrapper>
+            <span className="text-theme-background font-bold inline"> General Assembly</span>
+            <Wrapper animation={fadeDown}> - an intense 12-week program that pushed me to expand my technical skills and reinforced my excitement for creating meaningful solutions through code.</Wrapper>
+            <br></br>
+            <Wrapper animation={fadeDown}>Moving forward, I'm eager to join a collaborative team where I can apply my engineering mindset to tackle complex challenges, grow alongside supportive colleagues, and build tools or systems that truly make an impact.</Wrapper>
+          </p>
         </div>
         <button className="mt-10 text-5xl animate-bounce focus:outline-none" onClick={() => scrollTo("hobbies")}>
           ↓
