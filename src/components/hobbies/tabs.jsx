@@ -27,8 +27,8 @@ export default function HobbiesTabs() {
         }}
       >
         {hobbies.map(({ title, content, img }) => (
-          <TabPanel key={title} value={title} className="flex flex-col justify-center items-center text-start text-theme-words2 font-medium leading-normal min-h-[600px]">
-            <h2>{title}</h2>
+          <TabPanel key={title} value={title} className="flex flex-col justify-center items-center text-start text-theme-words2 font-medium leading-normal min-h-[585px]">
+            <h2 className="m-5">{title}</h2>
             <p>{content}</p>
             {img && <img src={img} />}
           </TabPanel>
