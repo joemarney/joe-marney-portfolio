@@ -15,6 +15,9 @@ import { SiNetlify } from "react-icons/si";
 import { SiHeroku } from "react-icons/si";
 import { SiPypi } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiPostman } from "react-icons/si";
+import { SiCloudinary } from "react-icons/si";
 
 export const skills = [
   {
@@ -80,5 +83,17 @@ export const skills = [
   {
     Icon: SiExpress,
     label: "Express",
+  },
+  {
+    Icon: SiTailwindcss,
+    label: "TailwindCSS",
+  },
+  {
+    Icon: SiPostman,
+    label: "Postman",
+  },
+  {
+    Icon: SiCloudinary,
+    label: "Cloudinary",
   },
 ];

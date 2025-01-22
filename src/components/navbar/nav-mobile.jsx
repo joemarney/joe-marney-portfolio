@@ -1,14 +1,13 @@
-//! Imports
 import { useClickAway } from "react-use";
 import { useRef, useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import { Squash as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 
-//! Animations
+// Animations
+import { AnimatePresence } from "framer-motion";
+import { Squash as Hamburger } from "hamburger-react";
 import Wrapper from "../animations/wrapper";
 
-//! Routes
+// Routes
 import { routes } from "./routes";
 
 export const NavMobile = ({ scrollTo, setIsNavbarVisible }) => {
@@ -36,18 +35,19 @@ export const NavMobile = ({ scrollTo, setIsNavbarVisible }) => {
                 const { Icon, to, title } = route;
 
                 return (
-                  <Link
-                    key={idx}
-                    className=" text-theme-words transition-all duration-300 hover:text-theme-hover flex items-center justify-center p-5 cursor-pointer"
-                    onClick={() => {
-                      scrollTo(to);
-                      setOpen(false);
-                      setTimeout(() => setIsNavbarVisible(false), 500);
-                    }}
-                  >
-                    <Icon className="text-xl mx-5" />
-                    <span className="text-lg">{title}</span>
-                  </Link>
+                  <li key={idx}>
+                    <Link
+                      className=" text-theme-words transition-all duration-300 hover:text-theme-hover flex items-center justify-center p-5 cursor-pointer"
+                      onClick={() => {
+                        scrollTo(to);
+                        setOpen(false);
+                        setTimeout(() => setIsNavbarVisible(false), 500);
+                      }}
+                    >
+                      <Icon className="text-xl mx-5" />
+                      <span className="text-lg">{title}</span>
+                    </Link>
+                  </li>
                 );
               })}
             </ul>

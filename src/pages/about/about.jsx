@@ -20,6 +20,7 @@ export default function About({ scrollTo }) {
             key={index}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            animate={{ y: [0, -10, 0] }}
             viewport={{ once: true }}
             transition={{
               delay: index * 0.05,
@@ -46,10 +47,12 @@ export default function About({ scrollTo }) {
           <p>
             For 8 years, I worked for a leading aerospace company, building and repairing defense systems for the MOD and governments worldwide. There I developed my understanding of{" "}
             <span className="text-theme-background font-semibold inline">
-              <LetterAnimation text="precision, problem-solving," />
+              <LetterAnimation text="precision, " />
+              <LetterAnimation text="problem-solving, " />
             </span>{" "}
+            and{" "}
             <span className="text-theme-background font-semibold inline">
-              <LetterAnimation text="and innovation." />
+              <LetterAnimation text="innovation. " />
             </span>{" "}
             I contributed to confidential and time-sensitive projects where attention to detail was critical.
             <br />
