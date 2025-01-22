@@ -40,3 +40,19 @@ export const childFadeUp = {
   viewport: { once: false, amount: 0.2 },
   transition: { duration: 0.6, ease: "easeOut" },
 };
+
+export const caterpillarWiggle = {
+  initial: { opacity: 0, y: 0 },
+  animate: {
+    opacity: 1,
+    y: [0, -10, 0],
+  },
+  transition: (index) => ({
+    delay: index * 0.1,
+    duration: 0.4,
+    ease: "easeInOut",
+    repeat: Infinity,
+    repeatDelay: 5,
+    // repeatType: "reverse",
+  }),
+};

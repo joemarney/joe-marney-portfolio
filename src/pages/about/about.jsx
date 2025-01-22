@@ -9,7 +9,12 @@ import styles from "./about.module.scss";
 export default function About({ scrollTo }) {
   const LetterAnimation = ({ text }) => {
     return (
-      <>
+      <span
+        style={{
+          display: "inline-block",
+          whiteSpace: "nowrap",
+        }}
+      >
         {text.split("").map((char, index) => (
           <motion.span
             key={index}
@@ -19,12 +24,12 @@ export default function About({ scrollTo }) {
               delay: index * 0.05,
               duration: 0.5,
             }}
-            style={{ display: "inline" }}
+            style={{ display: "inline-block" }}
           >
-            {char}
+            {char === " " ? "\u00A0" : char}
           </motion.span>
         ))}
-      </>
+      </span>
     );
   };
 
@@ -38,10 +43,13 @@ export default function About({ scrollTo }) {
         <div>
           <h1 className="text-theme-background mb-2 font-normal text-4xl">Manufacturing Engineer</h1>
           <p>
-            For 8 years, I worked for a leading aerospace company, building and repairing defense systems for the MOD and governments worldwide. There I developed my understanding of
+            For 8 years, I worked for a leading aerospace company, building and repairing defense systems for the MOD and governments worldwide. There I developed my understanding of{" "}
             <span className="text-theme-background font-semibold inline">
-              <LetterAnimation text=" precision, problem-solving, and innovation. " />
-            </span>
+              <LetterAnimation text="precision, problem-solving," />
+            </span>{" "}
+            <span className="text-theme-background font-semibold inline">
+              <LetterAnimation text="and innovation." />
+            </span>{" "}
             I contributed to confidential and time-sensitive projects where attention to detail was critical.
             <br />
             I've always had a passion for learning and personal growth. So I decided to evolve my career and explore a new field where I could continue to solve problems and build solutions.
@@ -49,14 +57,14 @@ export default function About({ scrollTo }) {
 
           <h1 className="text-theme-background mt-4 mb-2 font-normal text-4xl">Software Engineer</h1>
           <p>
-            I took a leap and completed the
+            I took a leap and completed the{" "}
             <span className="text-theme-background font-semibold inline">
-              <LetterAnimation text=" Software Engineering Immersive Bootcamp " />
-            </span>
-            with
+              <LetterAnimation text="Software Engineering Immersive Bootcamp" />
+            </span>{" "}
+            with{" "}
             <span className="text-theme-background font-semibold inline">
-              <LetterAnimation text=" General Assembly " />
-            </span>
+              <LetterAnimation text="General Assembly" />
+            </span>{" "}
             - an intense 12-week program that pushed me to expand my technical skills and reinforced my excitement for creating meaningful solutions through code.
             <br />
             Moving forward, I'm eager to join a collaborative team where I can apply my engineering mindset to tackle complex challenges, grow alongside supportive colleagues, and build tools or systems that truly make an impact.
