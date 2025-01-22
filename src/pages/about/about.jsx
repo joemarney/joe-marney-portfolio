@@ -18,8 +18,9 @@ export default function About({ scrollTo }) {
         {text.split("").map((char, index) => (
           <motion.span
             key={index}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{
               delay: index * 0.05,
               duration: 0.5,
