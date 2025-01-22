@@ -17,14 +17,14 @@ export default function About({ scrollTo }) {
       >
         {text.split("").map((char, index) => (
           <motion.span
-            key={index}
-            initial={{ opacity: 0 }}
+            key={`${index}-${char}`}
+            initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1 }}
-            animate={{ y: [0, -10, 0] }}
-            viewport={{ once: true }}
+            animate={{ y: [0, -3, 0] }}
+            viewport={{ once: false }}
             transition={{
               delay: index * 0.05,
-              duration: 0.5,
+              duration: 0.3,
             }}
             style={{ display: "inline-block" }}
           >
