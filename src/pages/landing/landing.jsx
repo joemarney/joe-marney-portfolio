@@ -15,7 +15,7 @@ export default function Landing({ scrollTo }) {
   return (
     <section id="landing" className="h-screen flex flex-col justify-center items-center bg-theme-background text-theme-words2 text-center">
       <Wrapper animation={fadeRight}>
-        <h1 className="text-5xl font-bold">Joe Marney</h1>
+        <h1 className="text-5xl font-normal">Joe Marney</h1>
       </Wrapper>
       <Wrapper animation={fadeLeft}>
         <h2 className="text-6xl mt-4">Software Engineer</h2>
@@ -25,12 +25,12 @@ export default function Landing({ scrollTo }) {
       </Wrapper>
       <Wrapper animation={fadeLeft}>
         <div className={styles.links}>
-          <motion.div whileHover={{ scale: 1.2, rotate: 10, color: "#0077B5" }} transition={{ type: "spring", stiffness: 300 }}>
+          <motion.div whileHover={{ scale: 1.4, rotate: 10, color: "#EAEAEA" }} transition={{ type: "spring", stiffness: 100 }}>
             <Link to="https://www.linkedin.com/in/joe-marney/">
               <FaLinkedin size="60" />
             </Link>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.2, rotate: -10, color: "#333" }} transition={{ type: "spring", stiffness: 300 }}>
+          <motion.div whileHover={{ scale: 1.4, rotate: -10, color: "#EAEAEA" }} transition={{ type: "spring", stiffness: 100 }}>
             <Link to="https://github.com/joemarney">
               <FaGithub size="60" />
             </Link>

@@ -86,7 +86,7 @@ export default function App() {
 
       <section ref={(el) => (sectionsRef.current[2] = el)} id="projects" className="h-screen flex flex-col justify-center items-center bg-theme-background text-center place-items-center snap-start">
         <Wrapper animation={fadeScale}>
-          <h1 className="m-20 text-4xl font-bold">projects</h1>
+          <h1 className="m-20 text-4xl font-normal">projects</h1>
         </Wrapper>
 
         <div className="w-full flex overflow-x-auto snap-x snap-mandatory sm:flex-wrap sm:justify-center md:justify-center">

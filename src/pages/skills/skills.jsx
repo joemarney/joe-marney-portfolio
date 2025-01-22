@@ -17,7 +17,7 @@ export default function Skills({ scrollTo }) {
   return (
     <section id="skills" className="h-screen w-full flex flex-col justify-center items-center bg-theme-background2 text-theme-words">
       <Wrapper animation={fadeScale}>
-        <h1 className="text-4xl font-bold text-center m-10">skills</h1>
+        <h1 className="text-4xl font-normal text-center m-10">skills</h1>
       </Wrapper>
       <div className={styles.skillsContainer}>
         <motion.div className="flex flex-wrap justify-center items-center w-full" variants={containerStagger} initial="initial" whileInView="whileInView" viewport={{ once: false, amount: 0.2 }}>

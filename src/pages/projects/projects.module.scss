@@ -10,19 +10,17 @@
 }
 
 .technologies {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   div {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-}
-
-@media (min-width: 300px) {
-  .technologies {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  svg {
-    width: 30px;
+    svg {
+      width: 10px;
+    }
   }
 }
