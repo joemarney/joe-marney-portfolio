@@ -2,11 +2,11 @@
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
-import { motion } from "framer-motion";
 
 //! Animations
 import Wrapper from "../../components/animations/wrapper";
 import { fadeRight, fadeLeft } from "../../components/animations/animations";
+import { motion } from "framer-motion";
 
 //! Styles
 import styles from "./landing.module.scss";

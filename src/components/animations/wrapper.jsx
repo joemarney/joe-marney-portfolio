@@ -1,10 +1,10 @@
 //! Imports
 import { motion } from "framer-motion";
 
-export default function Wrapper({ children, animation, className, ...props }) {
+export default function Wrapper({ animation, children, className, inline = false }) {
   return (
-    <motion.span initial={animation.initial} animate={animation.animate} exit={animation.exit} whileInView={animation.whileInView} viewport={{ once: animation.once || false }} transition={animation.transition || { duration: 0.8 }} className={`inline ${className}`} {...props}>
+    <motion.div initial={animation.initial} whileInView={animation.whileInView} viewport={{ once: animation.once || false }} transition={animation.transition || { duration: 0.8 }} style={inline ? { display: "inline" } : {}} className={className}>
       {children}
-    </motion.span>
+    </motion.div>
   );
 }

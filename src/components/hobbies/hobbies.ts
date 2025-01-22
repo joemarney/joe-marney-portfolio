@@ -12,7 +12,7 @@ export const hobbies = [
   },
   {
     title: "hiking",
-    content: "Growing up we pretty much exclusively holidayed in England. I have visited places of astonishing beauty and hiked all over. The tallest mountains I have climbed so far are: Yr Wyddfa, Scafell Pike, and Ben Nevis. It has been a dream of mine to climb Mount Kilimanjaro ever since I first learned about it. I have also been to America where I have hiked in the Grand Canyon and Yosemite Falls. I am very keen to go back out there!",
+    content: "Growing up we pretty much exclusively holidayed in England. I have visited places of astonishing beauty and hiked all over. The tallest mountains I have climbed so far are: Yr Wyddfa, Scafell Pike, and Ben Nevis. I have also been to America where I have hiked in the Grand Canyon and Yosemite Falls. I am very keen to go back out there!",
     img: "src/assets/images/mehiking.jpg",
     Icon: PiPersonSimpleWalkFill,
   },

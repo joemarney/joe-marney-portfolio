@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
+
+//! Animations
 import { motion } from "framer-motion";
 
 //! Styles
