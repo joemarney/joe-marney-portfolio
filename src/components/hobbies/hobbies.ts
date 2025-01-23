@@ -6,19 +6,19 @@ import { TbCampfireFilled } from "react-icons/tb";
 export const hobbies = [
   {
     title: "gaming",
-    content: "As long as I can remember, I have always had a controller in my hands! I love the Dark Souls series and am currently playing DS2. My favorite games of all time are: Minecraft, Elden Ring, Dark Souls 3, Pokémon Emerald, and Pokémon Platinum.",
+    content: "I have been gaming my entire life. I particularly enjoy challenging games made by FromSoftware. The best being: Dark Souls 3 and Elden Ring.  Recently I have been playing Dark Souls 2 which presents a different level of difficulty. My favourite games of all time also include: Skyrim, Minecraft, Pokémon Emerald, Pokémon Platinum, Fallout 4 and Balatro.",
     img: "src/assets/images/megaming.jpg",
     Icon: IoGameController,
   },
   {
     title: "hiking",
-    content: "Growing up we pretty much exclusively holidayed in England. I have visited places of astonishing beauty and hiked all over. The tallest mountains I have climbed so far are: Yr Wyddfa, Scafell Pike, and Ben Nevis. I have also been to America where I have hiked in the Grand Canyon and Yosemite Falls. I am very keen to go back out there!",
+    content: "The feeling you get from completing a difficult hike is unrivalled. I have climbed Yr Wyddfa, Scafell Pike, Ben Nevis and others. I have also hiked in the Grand Canyon and Yosemite Falls.  I am very excited to get back out to America as there is so much more to see and do!",
     img: "src/assets/images/mehiking.jpg",
     Icon: PiPersonSimpleWalkFill,
   },
   {
     title: "camping",
-    content: "Every time we come back from camping, I am thinking about the next time! My friends and I have stayed in forests all over England and Wales, stretching from the Peak District to the South Downs. Next stop has got to be the Lake District!",
+    content: "I look forward to the next time I go camping with my friends. We have camped in woodlands all over England and Wales. I think the Lake District has got to be next on the list. We enjoy cooking and one of the best dishes we have made was Sea Bass.",
     img: "src/assets/images/mecamping.jpg",
     Icon: TbCampfireFilled,
   },

@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 //! Animations
 import { motion } from "framer-motion";
@@ -44,6 +45,9 @@ export default function Projects({ title, description, thumbnail, video, timesca
         {openModalIndex && (
           <div className="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-theme-background2 bg-opacity-60 backdrop-blur-sm">
             <div className="relative m-4 p-4 w-full max-w-[90%] sm:max-w-[75%] max-h-[90%] overflow-y-auto rounded-lg shadow-sm bg-theme-background2" onClick={(e) => e.stopPropagation()}>
+              <button onClick={closeModal} className="absolute top-5 right-5 text-theme-words hover:text-theme-hover" type="button">
+                <IoClose size="35" />
+              </button>
               <div>
                 <h2 className="text-theme-words text-2xl">{title}</h2>
               </div>
@@ -62,7 +66,6 @@ export default function Projects({ title, description, thumbnail, video, timesca
                   </p>
                 ))}
               </div>
-              <h2 className="text-lg font-semibold text-theme-words">technologies used</h2>
               <div className={styles.technologies}>
                 {technologies.map(({ Icon, label }, index) => (
                   <div key={index}>
@@ -70,11 +73,6 @@ export default function Projects({ title, description, thumbnail, video, timesca
                     <p className="text-theme-words mx-5">{label}</p>
                   </div>
                 ))}
-              </div>
-              <div className="flex shrink-0 flex-wrap items-center pt-4 justify-end">
-                <button onClick={closeModal} className="rounded-md bg-theme-buttons py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-theme-focus focus:shadow-none active:bg-theme-accents hover:bg-theme-hover active:shadow-none" type="button">
-                  Close
-                </button>
               </div>
             </div>
           </div>

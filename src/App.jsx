@@ -73,7 +73,7 @@ export default function App() {
   };
 
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-scroll">
+    <main className="snap-y snap-mandatory max-h-screen overflow-scroll overflow-x-hidden">
       <NavBar scrollTo={scrollTo} isNavbarVisible={isNavbarVisible} setIsNavbarVisible={setIsNavbarVisible} />
 
       <section className="snap-start" ref={(el) => (sectionsRef.current[0] = el)}>
@@ -89,7 +89,7 @@ export default function App() {
           <h1 className="m-20 text-4xl font-normal">projects</h1>
         </Wrapper>
 
-        <div className="w-full flex overflow-x-auto snap-x snap-mandatory sm:flex-wrap sm:justify-center md:justify-center">
+        <div className="w-full flex overflow-x-auto snap-y snap-mandatory sm:flex-wrap sm:justify-center md:justify-center">
           {projects.map((project, index) => (
             <div key={index} className="flex-shrink-0 w-80 snap-center sm:w-80 md:w-96 lg:w-1/3 xl:w-1/4">
               <Projects {...project} openModalIndex={openModalIndex === index} openModal={() => openModal(index)} closeModal={closeModal} />

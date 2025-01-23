@@ -1,3 +1,6 @@
+//! Imports
+import { useEffect, useState } from "react";
+
 //! Animations
 import Wrapper from "../../components/animations/wrapper";
 import { fadeScale } from "../../components/animations/animations";
@@ -7,7 +10,16 @@ import { motion } from "framer-motion";
 import styles from "./about.module.scss";
 
 export default function About({ scrollTo }) {
-  const LetterAnimation = ({ text }) => {
+  function LetterAnimation({ text }) {
+    const [triggerAnimation, setTriggerAnimation] = useState(false);
+
+    useEffect(() => {
+      if (triggerAnimation) {
+        const timer = setTimeout(() => setTriggerAnimation(false), 2000);
+        return () => clearTimeout(timer);
+      }
+    }, [triggerAnimation]);
+
     return (
       <span
         style={{
@@ -18,10 +30,8 @@ export default function About({ scrollTo }) {
         {text.split("").map((char, index) => (
           <motion.span
             key={`${index}-${char}`}
-            initial={{ opacity: 0, y: 0 }}
-            whileInView={{ opacity: 1 }}
-            animate={{ y: [0, -3, 0] }}
-            viewport={{ once: false }}
+            onViewportEnter={() => setTriggerAnimation(true)}
+            animate={triggerAnimation ? { y: [0, -5, 0], opacity: 1 } : { opacity: 1 }}
             transition={{
               delay: index * 0.05,
               duration: 0.3,
@@ -33,7 +43,7 @@ export default function About({ scrollTo }) {
         ))}
       </span>
     );
-  };
+  }
 
   return (
     <main className={styles.container}>
@@ -63,7 +73,8 @@ export default function About({ scrollTo }) {
           <p>
             I took a leap and completed the{" "}
             <span className="text-theme-background font-semibold inline">
-              <LetterAnimation text="Software Engineering Immersive Bootcamp" />
+              <LetterAnimation text="Software Engineering " />
+              <LetterAnimation text="Immersive Bootcamp" />
             </span>{" "}
             with{" "}
             <span className="text-theme-background font-semibold inline">
