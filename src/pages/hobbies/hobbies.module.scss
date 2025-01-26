@@ -15,16 +15,26 @@
 
 @media (min-width: 1000px) {
   .hobbies {
+    margin: 0px 40px;
     svg {
       width: 40px;
+    }
+    img {
+      max-height: 250px;
+      max-width: 250px;
     }
   }
 }
 
 @media (min-width: 1500px) {
   .hobbies {
+    margin: 0px 40px;
     svg {
       width: 60px;
+    }
+    img {
+      max-height: 400px;
+      max-width: 400px;
     }
   }
 }
