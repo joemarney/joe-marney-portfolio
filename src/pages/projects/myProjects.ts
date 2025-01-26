@@ -6,8 +6,8 @@ export const projects = [
   {
     title: "Mastermind",
     description: "Code cracking game",
-    thumbnail: "src/assets/images/mastermind.png",
-    video: "src/assets/images/mastermind.gif",
+    thumbnail: "./assets/images/mastermind.png",
+    video: "./assets/images/mastermind.gif",
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-1-project-mastermind",
     deployedLink: "https://joemarney.github.io/unit-1-project-mastermind/",
@@ -22,8 +22,8 @@ export const projects = [
   {
     title: "Beatsync",
     description: "Rate music venues",
-    thumbnail: "src/assets/images/beatsync.png",
-    video: "src/assets/images/beatsync.gif",
+    thumbnail: "./assets/images/beatsync.png",
+    video: "./assets/images/beatsync.gif",
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-2-project-beatsync",
     deployedLink: "https://projectbeatsync.netlify.app/",
@@ -42,8 +42,8 @@ export const projects = [
   {
     title: "Life's a Pitch",
     description: "View campsites",
-    thumbnail: "src/assets/images/lifesapitch.png",
-    video: "src/assets/images/lap.gif",
+    thumbnail: "./assets/images/lifesapitch.png",
+    video: "./assets/images/lap.gif",
     timescale: "Pair - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-3-project-lifesapitch-frontend",
     deployedLink: "https://lifesapitch.netlify.app/",
@@ -60,8 +60,8 @@ export const projects = [
   {
     title: "Repotted",
     description: "Track plant growth",
-    thumbnail: "src/assets/images/repotted.png",
-    video: "src/assets/images/repotted.gif",
+    thumbnail: "./assets/images/repotted.png",
+    video: "./assets/images/repotted.gif",
     timescale: "Solo - 10 days",
     gitHubLink: "https://github.com/joemarney/unit-4-project-repotted-frontend",
     deployedLink: "https://repotted.netlify.app/",
