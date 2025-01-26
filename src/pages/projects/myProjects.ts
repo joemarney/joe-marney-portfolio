@@ -2,12 +2,24 @@
 import { Html5Original, Css3Original, JavascriptOriginal, NodejsOriginal, MongodbOriginal, ReactOriginal, SassOriginal, PythonOriginal, PostgresqlOriginal, DjangoPlain, FigmaOriginal, NetlifyOriginal, HerokuOriginal } from "devicons-react";
 import { SiExpress } from "react-icons/si";
 
+//! Thumbnails
+import mastermindthumb from "../../assets/images/mastermind.png";
+import beastyncthumb from "../../assets/images/beatsync.png";
+import lapthumb from "../../assets/images/lifesapitch.png";
+import repottedthumb from "../../assets/images/repotted.png";
+
+//! GIFs
+import mastermindgif from "../../assets/images/mastermind.gif";
+import beatsyncgif from "../../assets/images/beatsync.gif";
+import lapgif from "../../assets/images/lap.gif";
+import repottedgif from "../../assets/images/repotted.gif";
+
 export const projects = [
   {
     title: "Mastermind",
     description: "Code cracking game",
-    thumbnail: "./assets/images/mastermind.png",
-    video: "./assets/images/mastermind.gif",
+    thumbnail: mastermindthumb,
+    video: mastermindgif,
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-1-project-mastermind",
     deployedLink: "https://joemarney.github.io/unit-1-project-mastermind/",
@@ -22,8 +34,8 @@ export const projects = [
   {
     title: "Beatsync",
     description: "Rate music venues",
-    thumbnail: "./assets/images/beatsync.png",
-    video: "./assets/images/beatsync.gif",
+    thumbnail: beastyncthumb,
+    video: beatsyncgif,
     timescale: "Solo - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-2-project-beatsync",
     deployedLink: "https://projectbeatsync.netlify.app/",
@@ -42,8 +54,8 @@ export const projects = [
   {
     title: "Life's a Pitch",
     description: "View campsites",
-    thumbnail: "./assets/images/lifesapitch.png",
-    video: "./assets/images/lap.gif",
+    thumbnail: lapthumb,
+    video: lapgif,
     timescale: "Pair - 7 days",
     gitHubLink: "https://github.com/joemarney/unit-3-project-lifesapitch-frontend",
     deployedLink: "https://lifesapitch.netlify.app/",
@@ -60,8 +72,8 @@ export const projects = [
   {
     title: "Repotted",
     description: "Track plant growth",
-    thumbnail: "./assets/images/repotted.png",
-    video: "./assets/images/repotted.gif",
+    thumbnail: repottedthumb,
+    video: repottedgif,
     timescale: "Solo - 10 days",
     gitHubLink: "https://github.com/joemarney/unit-4-project-repotted-frontend",
     deployedLink: "https://repotted.netlify.app/",
