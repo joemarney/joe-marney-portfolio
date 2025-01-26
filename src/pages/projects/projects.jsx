@@ -45,8 +45,8 @@ export default function Projects({ title, description, thumbnail, video, timesca
         {openModalIndex && (
           <div className="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-theme-background2 bg-opacity-60 backdrop-blur-sm">
             <div className="relative m-4 p-4 w-full max-w-[90%] sm:max-w-[75%] max-h-[90%] overflow-y-auto rounded-lg shadow-sm bg-theme-background2" onClick={(e) => e.stopPropagation()}>
-              <button onClick={closeModal} className="absolute top-5 right-5 text-theme-words hover:text-theme-hover" type="button">
-                <IoClose size="35" />
+              <button onClick={closeModal} className="absolute top-2 right-2 text-theme-words hover:text-theme-hover" type="button">
+                <IoClose size="30" />
               </button>
               <div>
                 <h2 className="text-theme-words text-2xl">{title}</h2>

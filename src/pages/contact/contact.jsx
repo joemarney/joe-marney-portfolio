@@ -43,7 +43,7 @@ export default function Contact() {
   return (
     <section id="contact" className="h-screen flex flex-col justify-center items-center bg-theme-background2 text-theme-words text-center">
       <Wrapper animation={fadeScale}>
-        <h1 className="text-4xl font-normal m-10">contact me</h1>
+        <h1 className="font-normal m-10">contact me</h1>
       </Wrapper>
       <form onSubmit={handleSubmit(onSubmit)} className="w-80">
         <input type="checkbox" id="" className="hidden" style={{ display: "none" }} {...register("botcheck")}></input>

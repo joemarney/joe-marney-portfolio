@@ -15,10 +15,10 @@ export default function Landing({ scrollTo }) {
   return (
     <section id="landing" className="h-screen flex flex-col justify-center items-center bg-theme-background text-theme-words2 text-center">
       <Wrapper animation={fadeRight}>
-        <h1 className="text-5xl font-normal">Joe Marney</h1>
+        <h1 className="text-4xl font-normal">Joe Marney</h1>
       </Wrapper>
       <Wrapper animation={fadeLeft}>
-        <h2 className="text-6xl mt-4">Software Engineer</h2>
+        <h2 className="text-5xl mt-4 font-normal">Software Engineer</h2>
       </Wrapper>
       <Wrapper animation={fadeRight}>
         <p className="mt-6 text-2xl">Based in the UK</p>

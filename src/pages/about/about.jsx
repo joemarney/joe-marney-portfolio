@@ -49,11 +49,11 @@ export default function About({ scrollTo }) {
     <main className={styles.container}>
       <section id="about" className="min-h-screen flex flex-col justify-center items-center bg-theme-background2 text-theme-words">
         <Wrapper animation={fadeScale}>
-          <h1 className="text-4xl font-normal text-center m-10">about me</h1>
+          <h1 className="font-normal text-center m-10">about me</h1>
         </Wrapper>
 
         <div>
-          <h1 className="text-theme-background mb-2 font-normal text-4xl">Manufacturing Engineer</h1>
+          <h2 className="text-theme-background mb-2 font-normal">Manufacturing Engineer</h2>
           <p>
             For 8 years, I worked for a leading aerospace company, building and repairing defense systems for the MOD and governments worldwide. There I developed my understanding of{" "}
             <span className="text-theme-background font-semibold inline">
@@ -69,7 +69,7 @@ export default function About({ scrollTo }) {
             I've always had a passion for learning and personal growth. So I decided to evolve my career and explore a new field where I could continue to solve problems and build solutions.
           </p>
 
-          <h1 className="text-theme-background mt-4 mb-2 font-normal text-4xl">Software Engineer</h1>
+          <h2 className="text-theme-background mt-4 mb-2 font-normal">Software Engineer</h2>
           <p>
             I took a leap and completed the{" "}
             <span className="text-theme-background font-semibold inline">
