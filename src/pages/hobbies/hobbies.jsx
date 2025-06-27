@@ -10,7 +10,7 @@ import styles from "./hobbies.module.scss";
 
 export default function Hobbies({ scrollTo }) {
   return (
-    <section id="hobbies" className="h-screen flex flex-col justify-center items-center bg-theme-background text-theme-words2 text-center">
+    <section id="hobbies" className="min-h-screen flex flex-col justify-center items-center bg-theme-background text-theme-words2 text-center">
       <Wrapper animation={fadeScale}>
         <h1 className="font-normal text-center mt-20 mb-10">hobbies</h1>
       </Wrapper>
