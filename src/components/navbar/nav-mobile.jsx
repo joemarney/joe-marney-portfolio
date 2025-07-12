@@ -32,21 +32,28 @@ export const NavMobile = ({ scrollTo, setIsNavbarVisible }) => {
           >
             <ul className="grid gap-2">
               {routes.map((route, idx) => {
-                const { Icon, to, title } = route;
+                const { Icon, to, path, title } = route;
 
                 return (
                   <li key={idx}>
-                    <Link
-                      className=" text-theme-words transition-all duration-300 hover:text-theme-hover flex items-center justify-center p-5 cursor-pointer"
-                      onClick={() => {
-                        scrollTo(to);
-                        setOpen(false);
-                        setTimeout(() => setIsNavbarVisible(false), 500);
-                      }}
-                    >
-                      <Icon className="text-xl mx-5" />
-                      <span className="text-lg">{title}</span>
-                    </Link>
+                    {path ? (
+                      <Link to={path} onClick={() => setOpen(false)} className="text-theme-words transition-all duration-300 hover:text-theme-hover flex items-center justify-center p-5 cursor-pointer">
+                        <Icon className="text-xl mx-5" />
+                        <span className="text-lg">{title}</span>
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          scrollTo(to);
+                          setOpen(false);
+                          setTimeout(() => setIsNavbarVisible(false), 500);
+                        }}
+                        className="text-theme-words transition-all duration-300 hover:text-theme-hover flex items-center justify-center p-5 cursor-pointer w-full"
+                      >
+                        <Icon className="text-xl mx-5" />
+                        <span className="text-lg">{title}</span>
+                      </button>
+                    )}
                   </li>
                 );
               })}

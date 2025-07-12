@@ -4,6 +4,7 @@ import { IoLibrary } from "react-icons/io5";
 import { BiSolidUser } from "react-icons/bi";
 import { PiSmileyFill } from "react-icons/pi";
 import { PiChatCircleDotsFill } from "react-icons/pi";
+import { FaLightbulb } from "react-icons/fa6";
 
 export const routes = [
   {
@@ -30,5 +31,10 @@ export const routes = [
     title: "contact",
     to: "contact",
     Icon: PiChatCircleDotsFill,
+  },
+  {
+    title: "blog",
+    path: "/blog/pc-build",
+    Icon: FaLightbulb,
   },
 ];

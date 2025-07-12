@@ -73,7 +73,7 @@ export default function App() {
   };
 
   return (
-    <main className="snap-y snap-mandatory max-h-screen overflow-scroll overflow-x-hidden">
+    <main className="z-0 snap-y snap-mandatory max-h-screen overflow-scroll overflow-x-hidden">
       <NavBar scrollTo={scrollTo} isNavbarVisible={isNavbarVisible} setIsNavbarVisible={setIsNavbarVisible} />
 
       <section className="snap-start" ref={(el) => (sectionsRef.current[0] = el)}>
